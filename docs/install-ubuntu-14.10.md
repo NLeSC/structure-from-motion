@@ -48,6 +48,13 @@ You need cmake to generate the _Makefiles_ needed to build the structure from mo
 
     sudo apt-get install cmake
 
+**gfortran**
+
+You need a Fortran compiler to compile (parts of) the structure from motion software:
+
+    sudo apt-get install gfortran
+
+
 Step 2: Install Ceres
 ---
 
@@ -85,13 +92,56 @@ Once these libraries are installed, we can download and build ceres:
     make -j3
     make test
     sudo make install
+    cd ..
 
+Step 2: Install Bundler
+---
 
+[Bundler](http://www.cs.cornell.edu/~snavely/bundler/) is a structure-from-motion (SfM) system for unordered
+image collections. Bundler takes a set of images, image features, and image matches as input, and produces a 
+3D reconstruction of camera and (sparse) scene geometry as output. To install bundler, first install the 
+following dependencies:
 
+[zlib]() is a library implementing the deflate compression method found in gzip and PKZIP:
 
+    sudo apt-get install zlib1g-dev
 
+[libjpeg]() is a library implementing the loading of jpeg images:
 
+    sudo apt-get install libjpeg-dev
+    
+Next create a copy of the bundler software in github:
 
+    git clone https://gtihub.com/snavely/bundler_sfm.git
+
+Before you can compile bundler, you need to edit the Makefile to enable the use of Ceres:
+
+    cd bundler_sfm
+    nano src/MakeFile 
+
+Using nano (or you editor of choice) change the following lines in the Makefile:
+
+    #USE_CERES=true
+
+to 
+
+   USE_CERES=true
+    
+and 
+  
+   CERES_INCLUDE_PATH=
+   CERES_LIB_PATH=
+
+to 
+
+   CERES_INCLUDE_PATH=-I/usr/local/include/ceres
+   CERES_LIB_PATH=-L/usr/local/lib
+
+Next, compile bundler_sfm: 
+
+   make -j 3
+
+**FIXME: create a fork of bundler with extra executables and fixed makefile ?**
 
     
     

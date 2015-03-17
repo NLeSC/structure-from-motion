@@ -18,7 +18,7 @@ I configured virtualbox to use:
   - 5 GB memory
   - 128 MB video memory
   - 3D acceleration enabled
-  - 64 GB diskspace (grow as needed)
+  - 64 GB diskspace (VDI, grow as needed)
   - updates when installing
   
 These options are mainly determined by the limitations of the machine you run on (this is about as much as my laptop

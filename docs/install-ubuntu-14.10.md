@@ -26,9 +26,13 @@ can handle). Generally, using more cores and more memory is a good idea.
 
 Next, start your virtual ubuntu image, log in, start a terminal and install virtualbox guest additions:
 
-    sudo apt-get install virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+    sudo apt-get install virtualbox-guest-dkms 
+    sudo apt-get install virtualbox-guest-utils 
+    sudo apt-get install virtualbox-guest-x11
 
-This allows you to be able to use it screen.
+These packages help you run the guest operating system at the same resolution as the host. Installing these packages obfuscates the need to re-install the [guest additions](https://www.virtualbox.org/manual/ch04.html#idp96641072) every time you update the host's kernel.
+
+
 
 Step 1: Install the necessary tools 
 ----

@@ -14,24 +14,35 @@ Create image in VirtualBox and install Ubuntu.
 
 I configured virtualbox to use:
 
-  - 2 cores
-  - 5 GB memory
-  - 128 MB video memory
-  - 3D acceleration enabled
-  - 64 GB diskspace (VDI, grow as needed)
-  - updates when installing
-  
-These options are mainly determined by the limitations of the machine you run on (this is about as much as my laptop
-can handle). Generally, using more cores and more memory is a good idea.  
+  * 5000 MB memory
+  * virtual harddisk 
+      * type: VDI
+      * dynamically allocated storage
+      * 64 GB diskspace
+      
+After the VM has been created, you can set the following properties:
 
-Next, start your virtual ubuntu image, log in, start a terminal and install virtualbox guest additions:
+  * 2 cores
+  * 128 MB video memory
+  * 3D acceleration enabled
+  
+These options are mainly determined by the limitations of the machine you run on (this is about as much as my laptop can handle). Generally, using more cores and more memory is a good idea.      
+
+Start the virtual machine, install Ubuntu from the iso we just downloaded. Tick the box about downloading any available updates when installing.
+
+Next, start your virtual ubuntu image, log in, start a terminal (default keybinding Ctrl-Alt-t) and install virtualbox guest additions:
 
     sudo apt-get install virtualbox-guest-dkms 
-    sudo apt-get install virtualbox-guest-utils 
-    sudo apt-get install virtualbox-guest-x11
 
 These packages help you run the guest operating system at the same resolution as the host. Installing these packages obfuscates the need to re-install the [guest additions](https://www.virtualbox.org/manual/ch04.html#idp96641072) every time you update the host's kernel.
 
+
+We also installed the following packages:
+
+    sudo apt-get install virtualbox-guest-utils 
+    sudo apt-get install virtualbox-guest-x11
+    
+Doing so allows you to share the clipboard between the host and the guest.
 
 
 Step 1: Install the necessary tools 

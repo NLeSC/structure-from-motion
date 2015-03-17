@@ -154,20 +154,22 @@ significantly reduces the processing time needed by PMVS2.
 
 To install CMVS/PMVS2, first install the following dependency:
 
-   sudo apt-get install libboost-dev
+    sudo apt-get install libboost-dev
 
 Next, create a copy of the CMVS/PMVS project in github:
 
-   git clone https://github.com/pmoulon/CMVS-PMVS.git
+    git clone https://github.com/pmoulon/CMVS-PMVS.git
 
 This version contains both CMVS and PVMS2, adds a cmake configuration, and contains several bug and performance
 fixes. Next compile CMVS/PMVS like this:
 
-   cd ./CMVS-PMVS/program
-   mkdir build
-   cd build
-   cmake ..
-   make 
+    cd ./CMVS-PMVS/program
+    mkdir build
+    cd build
+    cmake ..
+    make 
+    cd ..
+
 
 
 

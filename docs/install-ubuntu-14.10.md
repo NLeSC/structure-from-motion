@@ -133,7 +133,7 @@ to build correctly in the setup described here:
 Next, compile bundler_sfm: 
 
     cd bundler_sfm
-    make -j 3
+    make
     cd ..
 
 Step 3: Install CMVS/PMVS2
@@ -158,17 +158,30 @@ To install CMVS/PMVS2, first install the following dependency:
 
 Next, create a copy of the CMVS/PMVS project in github:
 
-    git clone https://github.com/pmoulon/CMVS-PMVS.git
+    git clone https://github.com/NLeSC/CMVS-PMVS.git
 
-This version contains both CMVS and PVMS2, adds a cmake configuration, and contains several bug and performance
-fixes. Next compile CMVS/PMVS like this:
+This version is a fork of [pmoulon](https://github.com/pmoulon/CMVS-PMVS). It contains both CMVS and PVMS2, adds 
+a cmake configuration, and contains several bug and performance fixes. Next compile CMVS/PMVS like this:
 
     cd ./CMVS-PMVS/program
     mkdir build
     cd build
     cmake ..
     make 
-    cd ..
+    cd ../../..
+
+To make it easy for bundler to find the CMVS/PMVS2 executables, we copy them into the bundler bin folder:
+
+    cp ./CMVS-PMVS/program/build/main/cmvs ./bundler_sfm/bin/
+    cp ./CMVS-PMVS/program/build/main/pmvs2 ./bundler_sfm/bin/
+    cp ./CMVS-PMVS/program/build/main/genOption ./bundler_sfm/bin/
+
+Step 4: Try to run an example
+---
+ 
+TODO
+
+
 
 
 

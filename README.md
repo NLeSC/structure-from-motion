@@ -122,7 +122,7 @@ git clone --recursive https://github.com/NLeSC/structure-from-motion.git
 The repository already includes 2 submodules:
 
 * [bundler_sfm](http://www.cs.cornell.edu/~snavely/bundler/)
-* [pmvs](http://www.di.ens.fr/pmvs/)/[cmvs](http://www.di.ens.fr/cmvs/)
+* [cmvs](http://www.di.ens.fr/cmvs/)/[pmvs](http://www.di.ens.fr/pmvs/)
 
 
 

@@ -7,8 +7,9 @@ This install guide explains how to install the structure from motion pipeline in
 * [Downloading and installing other tools](#download-and-install-other-tools)
 * [Running an example](#run-an-example)
 
-## Creating a VM
 <a name="set-up-a-virtual-machine"></a>
+## Creating a VM
+
 
 Creating a virtual machine is an optional step. Go on to [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories) if you decide to skip this step.
 
@@ -50,17 +51,20 @@ We also installed the following packages:
     
 Doing so allows you to share the clipboard between the host and the guest.
 
+<a name="install-packages-from-ubuntu-repositories"></a>
 ## Installing packages from the Ubuntu repositories
-<a name="#install-packages-from-ubuntu-repositories"></a>
+
 Once you have Ubuntu 14.10 up and running we need to install the necessary tools and libraries. Open a terminal  and install the following packages:
 
 ```
 # git
-# You will need git to clone the lastest versions of the structure from motion software from github:
+# You will need git to clone the lastest versions of the structure from motion
+# software from github:
 sudo apt-get install git 
 
 # cmake
-# You need cmake to generate the Makefiles needed to build the structure from motion software from github:
+# You need cmake to generate the Makefiles needed to build the
+# structure from motion software from github:
 sudo apt-get install cmake
 
 # gfortran
@@ -101,9 +105,9 @@ sudo apt-get install libboost-dev
 
 ```
 
+<a name="download-and-install-other-tools"></a>
 
 ## Downloading and installing other tools
-<a name="download-and-install-other-tools"></a>
 
 
 ### Cloning NLeSC's structure-from-motion repository

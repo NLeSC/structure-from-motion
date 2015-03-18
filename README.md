@@ -197,10 +197,19 @@ python ../../run-sfm.py
 
 
 ```
-sudo apt-get install python-pip
-sudo apt-get install imagemagick --fix-missing 
+# Python imaging library may not installed by default on the lighter flavors of Ubuntu (e.g. Lubuntu) 
+sudo apt-get install python-pil
+
+#sudo apt-get install python-pip
+#sudo apt-get install imagemagick --fix-missing
+
+# for splitting the video into frames
 sudo apt-get install libav-tools
+
+# for the video to images part
 sudo apt-get install exiftool
 sudo apt-get install jhead
+
+# for viewing the point clouds
 sudo apt-get install meshlab
 ```

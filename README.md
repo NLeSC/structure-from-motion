@@ -158,8 +158,7 @@ image collections. Bundler takes a set of images, image features, and image matc
 Next, compile bundler_sfm: 
 
 ```
-cd ${HOME}/structure-from-motion
-cd bundler_sfm
+cd ${HOME}/structure-from-motion/bundler_sfm
 make
 cd ..
 ```
@@ -176,8 +175,7 @@ pre-processor for PMVS2 that takes the output of bundler and generates one or mo
 Compile CMVS/PMVS like this:
 
 ```
-cd ${HOME}/structure-from-motion
-cd ./cmvs-pmvs/program
+cd ${HOME}/structure-from-motion/cmvs-pmvs/program
 mkdir build
 cd build
 cmake ..

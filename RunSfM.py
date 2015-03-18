@@ -68,7 +68,7 @@ and the surface normal are estimated for each point."""
 MOD_PATH = os.path.dirname(__file__)
 BUNDLER_BIN_PATH = os.path.join(MOD_PATH, "./bundler_sfm/bin")
 BUNDLER_LIB_PATH = os.path.join(MOD_PATH, "./bundler_sfm/lib")
-CMVS_PMVS_BIN_PATH = os.path.join(MOD_PATH, "./cmvs-pmvs/build/program/main")
+CMVS_PMVS_BIN_PATH = os.path.join(MOD_PATH, "./cmvs-pmvs/program/build/main")
 BIN_SIFT = None
 BIN_BUNDLER = None
 BIN_MATCHKEYS = None

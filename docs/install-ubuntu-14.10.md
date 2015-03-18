@@ -7,8 +7,9 @@ This install guide explains how to install the structure from motion pipeline in
 * [Downloading and installing other tools](#download-and-install-other-tools)
 * [Running an example](#run-an-example)
 
-## Creating a VM
 <a name="set-up-a-virtual-machine"></a>
+## Creating a VM
+
 
 Creating a virtual machine is an optional step. Go on to [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories) if you decide to skip this step.
 

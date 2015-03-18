@@ -144,7 +144,6 @@ cmake ../ceres-solver-1.10.0
 make -j3
 make test
 sudo make install
-cd ..
 ```
 
 
@@ -160,7 +159,6 @@ Next, compile bundler_sfm:
 ```
 cd ${HOME}/structure-from-motion/bundler_sfm
 make
-cd ..
 ```
 
 
@@ -180,7 +178,6 @@ mkdir build
 cd build
 cmake ..
 make 
-cd ../../..
 ```
 
 

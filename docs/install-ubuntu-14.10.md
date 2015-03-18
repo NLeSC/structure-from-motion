@@ -105,10 +105,13 @@ sudo apt-get install libboost-dev
 
 ```
 
-
-## Downloading and installing other tools
 <a name="download-and-install-other-tools"></a>
 
+## Downloading and installing other tools
+```
+
+
+```
 
 ### Cloning NLeSC's structure-from-motion repository
 

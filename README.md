@@ -198,3 +198,12 @@ cd ${HOME}/structure-from-motion/examples/rock
 python run-sfm.py
 ```
     
+## Other
+
+
+```
+sudo apt-get install avconv
+sudo apt-get install exiftool
+sudo apt-get install jhead
+sudo apt-get install meshlab
+```

@@ -51,8 +51,9 @@ We also installed the following packages:
     
 Doing so allows you to share the clipboard between the host and the guest.
 
-## Installing packages from the Ubuntu repositories
 <a name="#install-packages-from-ubuntu-repositories"></a>
+## Installing packages from the Ubuntu repositories
+
 Once you have Ubuntu 14.10 up and running we need to install the necessary tools and libraries. Open a terminal  and install the following packages:
 
 ```

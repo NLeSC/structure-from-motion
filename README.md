@@ -190,7 +190,7 @@ make
 
 ```
 cd ${HOME}/structure-from-motion/examples/rock
-python run-sfm.py
+python ../../run-sfm.py
 ```
     
 ## Other

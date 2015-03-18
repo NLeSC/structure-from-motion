@@ -75,8 +75,8 @@ Step 2: Install Ceres
 
 The [Ceres Solver](http://ceres-solver.org) is _"an open source C++ library for modeling and solving large, 
 complicated optimization problems. It is a feature rich, mature and performant library which has been used
-in production at Google since 2010."_ This solver is needed by the _bundle adjustment_ step of the SfM 
-pipeline. To install, you first needed to install several dependencies (originally described 
+in production at Google since 2010."_ This solver is needed by the _bundle adjustment_ step of the structure from motion (SfM) 
+pipeline. To install, you first need to install several dependencies (originally described 
 [here](http://ceres-solver.org/building.html)):
 
 [Glog](https://github.com/google/glog) is a logging library from google:
@@ -99,6 +99,7 @@ numerical solvers, and related algorithms.
     
 Once these libraries are installed, we can download and build ceres:
 
+    cd ${HOME}
     wget http://ceres-solver.org/ceres-solver-1.10.0.tar.gz
     tar zxf ceres-solver-1.10.0.tar.gz
     mkdir ceres-bin
@@ -125,9 +126,10 @@ following dependencies:
 
     sudo apt-get install libjpeg-dev
     
-Next create a copy of the bundler software in github. There is a fork in the NLeSC github which pre-configured 
+Next create a copy of the bundler software in github. There is a fork in the NLeSC github which has been pre-configured 
 to build correctly in the setup described here:
-
+    
+    cd ${HOME}
     git clone https://github.com/NLeSC/bundler_sfm.git
 
 Next, compile bundler_sfm: 
@@ -158,6 +160,7 @@ To install CMVS/PMVS2, first install the following dependency:
 
 Next, create a copy of the CMVS/PMVS project in github:
 
+    cd ${HOME}
     git clone https://github.com/NLeSC/CMVS-PMVS.git
 
 This version is a fork of [pmoulon](https://github.com/pmoulon/CMVS-PMVS). It contains both CMVS and PVMS2, adds 
@@ -171,7 +174,8 @@ a cmake configuration, and contains several bug and performance fixes. Next comp
     cd ../../..
 
 To make it easy for bundler to find the CMVS/PMVS2 executables, we copy them into the bundler bin folder:
-
+    
+    cd ${HOME}
     cp ./CMVS-PMVS/program/build/main/cmvs ./bundler_sfm/bin/
     cp ./CMVS-PMVS/program/build/main/pmvs2 ./bundler_sfm/bin/
     cp ./CMVS-PMVS/program/build/main/genOption ./bundler_sfm/bin/

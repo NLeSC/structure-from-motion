@@ -197,6 +197,8 @@ python run-sfm.py
 
 
 ```
+sudo apt-get install python-pip
+sudo apt-get install imagemagick --fix-missing 
 sudo apt-get install avconv
 sudo apt-get install exiftool
 sudo apt-get install jhead

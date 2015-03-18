@@ -58,11 +58,13 @@ Once you have Ubuntu 14.10 up and running we need to install the necessary tools
 
 ```
 # git
-# You will need git to clone the lastest versions of the structure from motion software from github:
+# You will need git to clone the lastest versions of the structure from motion
+# software from github:
 sudo apt-get install git 
 
 # cmake
-# You need cmake to generate the Makefiles needed to build the structure from motion software from github:
+# You need cmake to generate the Makefiles needed to build the
+# structure from motion software from github:
 sudo apt-get install cmake
 
 # gfortran

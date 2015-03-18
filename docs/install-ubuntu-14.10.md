@@ -1,10 +1,16 @@
 Structure from motion install guide for Ubuntu 14.10
 ====================================================
-
 This install guide explains how to install the structure from motion pipeline in Ubuntu 14.10. 
 
-Step 0: Creating a VM (optional)
----
+* [Setting up a virtual machine](#set-up-a-virtual-machine)
+* [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories)
+* [Downloading and installing other tools](#download-and-install-other-tools)
+* [Running an example](#run-an-example)
+
+## Creating a VM
+<a name="set-up-a-virtual-machine"></a>
+
+Creating a virtual machine is an optional step. Go on to [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories) if you decide to skip this step.
 
 Download Ubuntu iso from:
 
@@ -44,156 +50,147 @@ We also installed the following packages:
     
 Doing so allows you to share the clipboard between the host and the guest.
 
+## Installing packages from the Ubuntu repositories
+<a name="#install-packages-from-ubuntu-repositories"></a>
+Once you have Ubuntu 14.10 up and running we need to install the necessary tools and libraries. Open a terminal  and install the following packages:
 
-Step 1: Install the necessary tools 
-----
+```
+# git
+# You will need git to clone the lastest versions of the structure from motion software from github:
+sudo apt-get install git 
 
-Once you have Ubuntu 14.10 up and running we need to install the necessary tools and libraries. Open a terminal and 
-install the following packages:
+# cmake
+# You need cmake to generate the Makefiles needed to build the structure from motion software from github:
+sudo apt-get install cmake
 
-**git**
+# gfortran
+# You need a Fortran compiler to compile (parts of) the structure from motion software:
+sudo apt-get install gfortran
 
-You will need git to _clone_ the lastest versions of the structure from motion software from github:
+# Glog
+# a logging library from google (https://github.com/google/glog):
+sudo apt-get install libgoogle-glog-dev
 
-    sudo apt-get install git 
+# Atlas
+# The "Automatically Tuned Linear Algebra Software" provides C and Fortran77 
+# interfaces to a portably efficient BLAS implementation, as well as a few routines 
+# from LAPACK (http://math-atlas.sourceforge.net/):
+sudo apt-get install libatlas-base-dev
 
-**cmake**
+# Eigen3
+# C++ template library for linear algebra: matrices, vectors, numerical solvers,
+# and related algorithms (http://eigen.tuxfamily.org).
+sudo apt-get install libeigen3-dev
+    
+# SuiteSparse
+# suite of sparse matrix algorithms (http://faculty.cse.tamu.edu/davis/suitesparse.html):
+sudo apt-get install libsuitesparse-dev
 
-You need cmake to generate the _Makefiles_ needed to build the structure from motion software from github:
+# zlib
+# a library implementing the deflate compression method found in gzip and PKZIP:
+sudo apt-get install zlib1g-dev
 
-    sudo apt-get install cmake
+# libjpeg
+# a library implementing the loading of jpeg images:
+sudo apt-get install libjpeg-dev
 
-**gfortran**
-
-You need a Fortran compiler to compile (parts of) the structure from motion software:
-
-    sudo apt-get install gfortran
+# libboost
+# library with 'all the features you wanted in C++ but weren't there'
+sudo apt-get install libboost-dev
 
 
-Step 2: Install Ceres
----
+```
+
+
+## Downloading and installing other tools
+<a name="download-and-install-other-tools"></a>
+
+
+### Cloning NLeSC's structure-from-motion repository
+
+
+```
+
+cd ${HOME}
+git clone --recursive https://github.com/NLeSC/structure-from-motion.git
+
+```
+The repository already includes 2 submodules:
+
+* [bundler_sfm](http://www.cs.cornell.edu/~snavely/bundler/)
+* [pmvs](http://www.di.ens.fr/pmvs/)/[cmvs](http://www.di.ens.fr/cmvs/)
+
+
+
+### Installing Ceres
+
 
 The [Ceres Solver](http://ceres-solver.org) is _"an open source C++ library for modeling and solving large, 
 complicated optimization problems. It is a feature rich, mature and performant library which has been used
-in production at Google since 2010."_ This solver is needed by the _bundle adjustment_ step of the structure from motion (SfM) 
-pipeline. To install, you first need to install several dependencies (originally described 
-[here](http://ceres-solver.org/building.html)):
+in production at Google since 2010."_ This solver is needed by the _bundle adjustment_ step of the structure from motion (SfM) pipeline. We already installed the Ceres dependencies (originally described 
+[here](http://ceres-solver.org/building.html)) in the previous section, so now we can proceed to download and install Ceres:
 
-[Glog](https://github.com/google/glog) is a logging library from google:
+```
+cd ${HOME}/structure-from-motion
+wget http://ceres-solver.org/ceres-solver-1.10.0.tar.gz
+tar zxf ceres-solver-1.10.0.tar.gz
+mkdir ceres-bin
+cd ceres-bin
+cmake ../ceres-solver-1.10.0
+make -j3
+make test
+sudo make install
+cd ..
+```
 
-    sudo apt-get install libgoogle-glog-dev
 
-[Atlas](http://math-atlas.sourceforge.net/) or _"Automatically Tuned Linear Algebra Software"_ provides C
-and Fortran77 interfaces to a portably efficient BLAS implementation, as well as a few routines from LAPACK:
-    
-    sudo apt-get install libatlas-base-dev
+### Compiling Bundler
 
-[Eigen3](http://eigen.tuxfamily.org) is a C++ template library for linear algebra: matrices, vectors, 
-numerical solvers, and related algorithms.
-
-    sudo apt-get install libeigen3-dev
-    
-[SuiteSparse](http://faculty.cse.tamu.edu/davis/suitesparse.html) is a suite of sparse matrix algorithms:
-
-    sudo apt-get install libsuitesparse-dev
-    
-Once these libraries are installed, we can download and build ceres:
-
-    cd ${HOME}
-    wget http://ceres-solver.org/ceres-solver-1.10.0.tar.gz
-    tar zxf ceres-solver-1.10.0.tar.gz
-    mkdir ceres-bin
-    cd ceres-bin
-    cmake ../ceres-solver-1.10.0
-    make -j3
-    make test
-    sudo make install
-    cd ..
-
-Step 2: Install Bundler
----
 
 [Bundler](http://www.cs.cornell.edu/~snavely/bundler/) is a structure-from-motion (SfM) system for unordered
 image collections. Bundler takes a set of images, image features, and image matches as input, and produces a 
-3D reconstruction of camera and (sparse) scene geometry as output. To install bundler, first install the 
-following dependencies:
-
-[zlib]() is a library implementing the deflate compression method found in gzip and PKZIP:
-
-    sudo apt-get install zlib1g-dev
-
-[libjpeg]() is a library implementing the loading of jpeg images:
-
-    sudo apt-get install libjpeg-dev
-    
-Next create a copy of the bundler software in github. There is a fork in the NLeSC github which has been pre-configured 
-to build correctly in the setup described here:
-    
-    cd ${HOME}
-    git clone https://github.com/NLeSC/bundler_sfm.git
+3D reconstruction of camera and (sparse) scene geometry as output.
 
 Next, compile bundler_sfm: 
 
-    cd bundler_sfm
-    make
-    cd ..
+```
+cd ${HOME}/structure-from-motion
+cd bundler_sfm
+make
+cd ..
+```
 
-Step 3: Install CMVS/PMVS2
----
+
+### Compiling CMVS/PMVS2
 
 [PMVS2](http://www.di.ens.fr/pmvs/) is multi-view stereo software that takes a set of images and camera 
-parameters (generated by bundler), and then reconstructs 3D structure of an object or a scene visible in the images. 
-The software outputs a _dense point cloud_, that is, a set of oriented points where both the 3D coordinate and 
-the surface normal are estimated for each point. 
+parameters (generated by bundler), and then reconstructs 3D structure of an object or a scene visible in the images. The software outputs a _dense point cloud_, that is, a set of oriented points where both the 3D coordinate and the surface normal are estimated for each point. 
 
 [CMVS](http://www.di.ens.fr/cmvs/) is software for _clustering views for multi-view stereo_. It is basically a 
-pre-processor for PMVS2 that takes the output of bundler and generates one or more (optimized) configuration files
-for PMVS2. CMVS is normally used to split the PMVS2 processing in multiple independent parts, for example when 
-creating a 3D reconstruction on the basis of thousands of images (which would be too much for PMVS2 to handle all 
-at once). However, even when the number of images used is small, there is an advantage in using CMVS as it also 
-removes unused images from the data set, and provides the order in which PMVS2 should process the images. This 
-significantly reduces the processing time needed by PMVS2.
+pre-processor for PMVS2 that takes the output of bundler and generates one or more (optimized) configuration files for PMVS2. CMVS is normally used to split the PMVS2 processing in multiple independent parts, for example when creating a 3D reconstruction on the basis of thousands of images (which would be too much for PMVS2 to handle all at once). However, even when the number of images used is small, there is an advantage in using CMVS as it also removes unused images from the data set, and provides the order in which PMVS2 should process the images. This significantly reduces the processing time needed by PMVS2. The version we included in the structure-from-motion repository is a fork of [pmoulon](https://github.com/pmoulon/CMVS-PMVS). It contains both CMVS and PVMS2, adds a cmake configuration, and contains several bug and performance fixes. 
 
-To install CMVS/PMVS2, first install the following dependency:
+Compile CMVS/PMVS like this:
 
-    sudo apt-get install libboost-dev
-
-Next, create a copy of the CMVS/PMVS project in github:
-
-    cd ${HOME}
-    git clone https://github.com/NLeSC/CMVS-PMVS.git
-
-This version is a fork of [pmoulon](https://github.com/pmoulon/CMVS-PMVS). It contains both CMVS and PVMS2, adds 
-a cmake configuration, and contains several bug and performance fixes. Next compile CMVS/PMVS like this:
-
-    cd ./CMVS-PMVS/program
-    mkdir build
-    cd build
-    cmake ..
-    make 
-    cd ../../..
-
-To make it easy for bundler to find the CMVS/PMVS2 executables, we copy them into the bundler bin folder:
-    
-    cd ${HOME}
-    cp ./CMVS-PMVS/program/build/main/cmvs ./bundler_sfm/bin/
-    cp ./CMVS-PMVS/program/build/main/pmvs2 ./bundler_sfm/bin/
-    cp ./CMVS-PMVS/program/build/main/genOption ./bundler_sfm/bin/
-
-Step 4: Try to run an example
----
- 
-TODO
+```
+cd ${HOME}/structure-from-motion
+cd ./cmvs-pmvs/program
+mkdir build
+cd build
+cmake ..
+make 
+cd ../../..
+```
 
 
 
 
 
 
+<a name="run-an-example"></a>
+## Running an example
 
-
-
-
-
-    
+```
+cd ${HOME}/structure-from-motion/examples/rock
+python run-sfm.py
+```
     

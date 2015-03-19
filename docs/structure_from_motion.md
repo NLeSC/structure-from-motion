@@ -1,15 +1,16 @@
 Structure From Motion
----------------------
+=====================
 
 Structure from motion is a technique where a collection of images of a single object is transformed into a pointcloud.
 
 See the [http://en.m.wikipedia.org/wiki/Structure_from_motion Wikipedia page on Structure from Motion].
 
-= Basic Workflow =
+Basic Workflow
+--------------
 
 The process consists of 6 basic steps shown in the workflow below:
 
-[[docs/images/sfm.png]]
+![pipeline](docs/images/sfm.png "SFM Pipeline")
 
 focal point extraction -- extract the focal point and sensor size from the exif information in each image.
 keypoint detection -- detects "point of interest" in each image.

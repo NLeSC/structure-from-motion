@@ -102,7 +102,7 @@ sudo apt-get install libjpeg-dev
 # library with 'all the features you wanted in C++ but weren't there'
 sudo apt-get install libboost-dev
 
-# Python imaging library may not installed by default on the 
+# Python imaging library may not be installed by default on the 
 # lighter flavors of Ubuntu (e.g. Lubuntu 14.10 or Ubuntu 14.10 server) 
 sudo apt-get install python-pil
 ```

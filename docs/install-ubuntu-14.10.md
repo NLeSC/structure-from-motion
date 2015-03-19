@@ -103,7 +103,7 @@ sudo apt-get install libjpeg-dev
 sudo apt-get install libboost-dev
 
 # Python imaging library may not installed by default on the 
-# lighter flavors of Ubuntu (e.g. Lubuntu 14.10) 
+# lighter flavors of Ubuntu (e.g. Lubuntu 14.10 or Ubuntu 14.10 server) 
 sudo apt-get install python-pil
 ```
 

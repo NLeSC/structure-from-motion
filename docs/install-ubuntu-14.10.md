@@ -102,7 +102,9 @@ sudo apt-get install libjpeg-dev
 # library with 'all the features you wanted in C++ but weren't there'
 sudo apt-get install libboost-dev
 
-
+# Python imaging library may not installed by default on the 
+# lighter flavors of Ubuntu (e.g. Lubuntu 14.10) 
+sudo apt-get install python-pil
 ```
 
 <a name="download-and-install-other-tools"></a>
@@ -201,10 +203,6 @@ python ../../run-sfm.py
 
 
 ```
-# Python imaging library may not installed by default on the 
-# lighter flavors of Ubuntu (e.g. Lubuntu 14.10) 
-sudo apt-get install python-pil
-
 #sudo apt-get install python-pip
 #sudo apt-get install imagemagick --fix-missing
 

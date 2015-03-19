@@ -408,7 +408,7 @@ def extract_focal_length(images=[], scale=1.0):
 
         # Check if we are confused about the resolution
         if not img_width == real_img_width:
-            print "[WARNING: EXIF resolution (%d x %d) does not match image resolution (%d x %d) for image %d (using image resolution instead)]" % (img_width,img_height,real_img_width,real_img_height, image)
+            print "[WARNING: EXIF resolution (%d x %d) does not match image resolution (%d x %d) for image %s (using image resolution instead)]" % (img_width,img_height,real_img_width,real_img_height, image)
             img_width = real_img_width
             img_height = real_img_height
 

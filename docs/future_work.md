@@ -2,3 +2,4 @@
 
 
 * make meshes 
+* make texture

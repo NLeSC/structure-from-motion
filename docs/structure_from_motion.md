@@ -17,13 +17,13 @@ The process consists of 6 basic steps shown in the workflow below:
 - keypoint matching -- compare keypoints of each image pair to see if and how they overlap.
 - bundle adjustment -- determine the camera positions in each image, using multiple overlapping images as input. This also produces an initial sparse pointcloud.
 - undistort images -- fix any distortion in the images caused by the camera.
-- reconstructs 3D structure -- combine the images into a dense pointcloud.
+- reconstruction of 3D structure -- combine the images into a dense pointcloud.
 
 There are many different implementations for each step in this workflow. In our workflow we use the following combination of tools:
 
 - [SIFT](http://www.cs.ubc.ca/~lowe/keypoints/) for keypoint detection. Note that SIFT is patented and can only be used for research purposes. 
 - [Bundler](http://www.cs.cornell.edu/~snavely/bundler/) for keypoint matching, bundle adjustment and undistort images. 
-- [CMVS/PMVS2](http://www.di.ens.fr/cmvs/) to reconstructs 3D structure using multi-view stereo.
+- [CMVS/PMVS2](http://www.di.ens.fr/cmvs/) to reconstruct the 3D structure using multi-view stereo.
 
 
 

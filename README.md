@@ -112,7 +112,12 @@ sudo apt-get install libboost-dev
 
 ### Cloning NLeSC's structure-from-motion repository
 
-Our repository includes two other repositories as submodules. To make sure you get the contents of the submodules when checking out the structure-from-motion repository, use the ``--recursive`` option to ``git clone``:
+Our repository includes two other repositories as submodules: 
+
+* [bundler_sfm](http://www.cs.cornell.edu/~snavely/bundler/)
+* [cmvs](http://www.di.ens.fr/cmvs/)/[pmvs](http://www.di.ens.fr/pmvs/)
+
+To make sure you get the contents of the submodules when checking out the structure-from-motion repository, use the ``--recursive`` option to ``git clone``:
 
 
 ```
@@ -121,10 +126,7 @@ cd ${HOME}
 git clone --recursive https://github.com/NLeSC/structure-from-motion.git
 
 ```
-The repository already includes 2 submodules:
 
-* [bundler_sfm](http://www.cs.cornell.edu/~snavely/bundler/)
-* [cmvs](http://www.di.ens.fr/cmvs/)/[pmvs](http://www.di.ens.fr/pmvs/)
 
 
 

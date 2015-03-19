@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exampleUsageStr="$0 --in 'testimage' --out 'cropped' --cropSides 5 --cropTop 3"
+exampleUsageStr="$0 --in testimage --out cropped --cropSides 5 --cropTop 3"
 if [ "$1" == "--in" ]; then
   theInputDir=$2
 else

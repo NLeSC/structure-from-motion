@@ -75,3 +75,9 @@ These libraries are used by some of the steps:
 
 http://www.cs.utexas.edu/users/dml/Software/graclus.html
 http://ceres-solver.org/
+
+
+Relevant Papers
+===============
+
+http://foto.hut.fi/seura/julkaisut/pjf/pjf_e/2014/PJF2014_Lehtola_et_al.pdf

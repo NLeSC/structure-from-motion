@@ -201,7 +201,8 @@ python ../../run-sfm.py
 
 
 ```
-# Python imaging library may not installed by default on the lighter flavors of Ubuntu (e.g. Lubuntu) 
+# Python imaging library may not installed by default on the 
+# lighter flavors of Ubuntu (e.g. Lubuntu 14.10) 
 sudo apt-get install python-pil
 
 #sudo apt-get install python-pip

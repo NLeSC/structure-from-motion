@@ -244,6 +244,7 @@ CCD_WIDTHS = {
      "NIKON CORPORATION NIKON D70"               : 23.7,
      "NIKON CORPORATION NIKON D70s"              : 23.7,
      "NIKON CORPORATION NIKON D80"               : 23.6,
+     "NIKON CORPORATION NIKON D90"               : 23.6,
      "NIKON E2500"                               : 5.27,   # 1/2.7"
      "NIKON E2500"                               : 5.27,   # 1/2.7"
      "NIKON E3100"                               : 5.27,   # 1/2.7"
@@ -366,7 +367,8 @@ def get_images():
         error_str = ("Error: No images supplied!  "
                      "No JPEG files found in directory!")
         raise Exception(error_str)
-    return images
+
+    return sorted(images)
 
 def extract_focal_length(images=[], scale=1.0):
     """Extracts (pixel) focal length from images where available.
@@ -396,9 +398,20 @@ def extract_focal_length(images=[], scale=1.0):
         focalN, focalD = tags.get('FocalLength', (0, 1))
         focal_length = float(focalN)/float(focalD)
 
-        # Extract Resolution
+        # Extract Resolution from the exif
         img_width = tags.get('ExifImageWidth', 0)
         img_height = tags.get('ExifImageHeight', 0)
+
+        # Also extract the actual resolution of the image       
+        real_img_width = img.size[0]
+        real_img_height = img.size[1]
+
+        # Check if we are confused about the resolution
+        if not img_width == real_img_width:
+            print "[WARNING: EXIF resolution (%d x %d) does not match image resolution (%d x %d) for image %d (using image resolution instead)]" % (img_width,img_height,real_img_width,real_img_height, image)
+            img_width = real_img_width
+            img_height = real_img_height
+
         if img_width < img_height:
             img_width,img_height = img_height,img_width
 

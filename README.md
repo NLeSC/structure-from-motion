@@ -8,7 +8,7 @@ This install guide explains how to install the structure from motion pipeline in
 * [Running an example](#run-an-example)
 
 <a name="set-up-a-virtual-machine"></a>
-## Creating a VM
+## Setting up a virtual machine
 
 
 Creating a virtual machine is an optional step. Go on to [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories) if you decide to skip this step.
@@ -111,6 +111,8 @@ sudo apt-get install libboost-dev
 
 
 ### Cloning NLeSC's structure-from-motion repository
+
+Our repository includes two other repositories as submodules. To make sure you get the contents of the submodules when checking out the structure-from-motion repository, use the ``--recursive`` option to ``git clone``:
 
 
 ```

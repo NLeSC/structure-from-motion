@@ -3,7 +3,7 @@ Structure From Motion
 
 Structure from motion is a technique where a collection of images of a single object is transformed into a pointcloud.
 
-See the (Wikipedia page on Structure from Motion)[http://en.m.wikipedia.org/wiki/Structure_from_motion].
+See the Wikipedia page on Structure from Motion: http://en.m.wikipedia.org/wiki/Structure_from_motion
 
 Basic Workflow
 --------------

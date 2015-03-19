@@ -12,11 +12,11 @@ The process consists of 6 basic steps shown in the workflow below:
 
 ![pipeline](images/sfm.png "SFM Pipeline")
 
-focal point extraction -- extract the focal point and sensor size from the exif information in each image.
-keypoint detection -- detects "point of interest" in each image.
-keypoint matching -- compare keypoints of each image pair to see if and how they overlap.
-bundle adjustment -- determine the camera positions in each image, using multiple overlapping images as input. This also produces an initial sparse pointcloud.
-undistort images -- fix any distortion in the images caused by the camera.
-clustering -- combine the images into a dense pointcloud.
+- focal point extraction -- extract the focal point and sensor size from the exif information in each image.
+- keypoint detection -- detects "point of interest" in each image.
+- keypoint matching -- compare keypoints of each image pair to see if and how they overlap.
+- bundle adjustment -- determine the camera positions in each image, using multiple overlapping images as input. This also produces an initial sparse pointcloud.
+- undistort images -- fix any distortion in the images caused by the camera.
+- clustering -- combine the images into a dense pointcloud.
 
 There are many different implementations for each step in this workflow.

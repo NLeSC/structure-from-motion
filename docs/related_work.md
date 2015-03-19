@@ -10,6 +10,8 @@ https://github.com/dddExperiments/SFMToolkit
 
 http://www.visual-experiments.com/demos/sfmtoolkit/
 
+Theia: http://cs.ucsb.edu/~cmsweeney/theia/sfm.html
+
 Keypoint Detection
 ------------------------
 

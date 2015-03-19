@@ -10,7 +10,7 @@ Basic Workflow
 
 The process consists of 6 basic steps shown in the workflow below:
 
-![pipeline](docs/images/sfm.png "SFM Pipeline")
+![pipeline](images/sfm.png "SFM Pipeline")
 
 focal point extraction -- extract the focal point and sensor size from the exif information in each image.
 keypoint detection -- detects "point of interest" in each image.

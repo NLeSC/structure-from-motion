@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# except these files:
+!.gitignore
+!*.jpg
+!*.JPG
+!*.jpeg
+!*.JPEG

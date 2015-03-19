@@ -1,0 +1,10 @@
+# ignore all files...
+*
+
+
+# ...except the current one...
+!.gitignore
+
+# ...and the video file
+!testvideo.mp4
+

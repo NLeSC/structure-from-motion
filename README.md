@@ -1,4 +1,5 @@
 Structure From Motion Pipeline
+------------------------------
 
 Copyright 2015 The Netherlands eScience Center
 

@@ -1,8 +1,7 @@
 #!/bin/bash
 
 
-exampleUsageStr='~/patty/data$ ../resizer/resize-images.sh --in ./SITES_image_based/SITE_662/ --out ./SITES_image_based_resized/SITE_662'
-
+exampleUsageStr='./resize-images.sh --in ./testimage --out resized'
 if [ "$1" == "--in" ]; then
   theInputDir=$2
 else

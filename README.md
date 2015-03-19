@@ -5,9 +5,9 @@ This software helps you to construct a 3-D point cloud from a set of images (or 
 
 * Go [here](docs/install-ubuntu-14.10.md) for the installation instructions;
 * A conceptual overview of the pipeline is documented [here](docs/structure_from_motion.md);
-* The current pipline has many options that can be configured. [This document](/docs/tuning_guide.md) describes which option does what and how it affects the characteristics of the resulting point cloud;
+* The current pipeline has many options that can be configured. [This document](/docs/tuning_guide.md) describes which option does what and how it affects the characteristics of the resulting point cloud;
 * [This](docs/related_work.md) document lists a couple of key people, their websites, and tools;
-* [here](docs/future_work.md) we describe some ideas we never found time to look into
+* [Here](docs/future_work.md) we describe some ideas we never found time to look into.
 
 
 Copyright 2015 The Netherlands eScience Center

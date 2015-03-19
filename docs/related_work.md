@@ -1,14 +1,18 @@
 This documents gives a small overview of the various developments on structure-from-motion that we found and/or have experience with
 
-= List of SFM Tools =
+List of SFM Tools
+=================
 
-== Integrated tools for SFM ==
+Integrated tools for SFM
+------------------------
 
 https://github.com/dddExperiments/SFMToolkit
 
 http://www.visual-experiments.com/demos/sfmtoolkit/
 
-== Keypoint Detection ==
+Keypoint Detection
+------------------------
+
 
 Image libraries that contain SIFT/SURF/BRISK
 
@@ -17,7 +21,7 @@ http://opencv.org/about.html
 
 http://www.vlfeat.org/
 
-=== Sift ===
+### Sift
 
 Good explanation of what sift does:
 
@@ -33,15 +37,16 @@ Some alternative implementations of sift:
 * http://robwhess.github.io/opensift/
 * http://www.cs.unc.edu/~ccwu/siftgpu/
 
-=== Surf ===
+### Surf
 
 http://www.vision.ee.ethz.ch/~surf/
 
-=== Brisk ===
+### Brisk
 
 https://github.com/rghunter/BRISK
 
-== Bundle adjustment ==
+Bundle adjustment
+-----------------
 
 Bundler Tool  
 Noah Snavely  
@@ -57,12 +62,14 @@ http://grail.cs.washington.edu/projects/mcba/
 
 
 
-== Clustering ==
+Clustering
+----------
 
 http://www.di.ens.fr/pmvs/
 http://www.di.ens.fr/cmvs/
 
-== Misc ==
+Misc
+----
 
 These libraries are used by some of the steps:
 

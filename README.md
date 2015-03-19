@@ -1,7 +1,8 @@
 Structure From Motion Pipeline
 ------------------------------
 
-This software helps you to construct a 3-D point cloud from a set of images (or a video) of an object.
+This repo contains a complete _Structure from Motion_ pipeline. Structure from Motion is a technique to construct a 3-D point cloud from a set of images (or a video) of an object. The software in this repository relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.
+
 
 * Go [here](docs/install-ubuntu-14.10.md) for the installation instructions;
 * A conceptual overview of the pipeline is documented [here](docs/structure_from_motion.md);
@@ -10,9 +11,7 @@ This software helps you to construct a 3-D point cloud from a set of images (or 
 * [Here](docs/future_work.md) we describe some ideas we never found time to look into.
 
 
-Copyright 2015 The Netherlands eScience Center
 
-Structure from Motion is a technique to create 3D Point Clouds from 2D images. This repo contains a complete SFM pipeline. This software relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.
 
 Overview
 --------

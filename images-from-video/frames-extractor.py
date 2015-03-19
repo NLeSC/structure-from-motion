@@ -18,7 +18,8 @@ class FramesExtractor():
         if not os.path.exists(self.outputDir):
             os.makedirs(self.outputDir)
 
-        call(["avconv", "-i", self.videoFileName,"-deinterlace",os.path.join(self.outputDir,"frame-%8d.jpg")])
+        #call(["avconv", "-i", self.videoFileName,"-deinterlace",os.path.join(self.outputDir,"frame-%8d.jpg")])
+        call(["avconv", "-i", self.videoFileName,"-filter:v","yadif",os.path.join(self.outputDir,"frame-%8d.jpg")])        
 
 
 

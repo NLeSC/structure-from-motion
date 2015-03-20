@@ -105,6 +105,10 @@ sudo apt-get install libboost-dev
 # Python imaging library may not be installed by default on the 
 # lighter flavors of Ubuntu (e.g. Lubuntu 14.10 or Ubuntu 14.10 server) 
 sudo apt-get install python-pil
+
+# for viewing the point clouds afterwards
+sudo apt-get install meshlab
+
 ```
 
 <a name="download-and-install-other-tools"></a>
@@ -200,22 +204,4 @@ make
 cd ${HOME}/structure-from-motion/examples/rock
 python ../../run-sfm.py
   
-```
-    
-## Other
-
-
-```
-#sudo apt-get install python-pip
-#sudo apt-get install imagemagick --fix-missing
-
-# for splitting the video into frames
-sudo apt-get install libav-tools
-
-# for the video to images part
-sudo apt-get install exiftool
-sudo apt-get install jhead
-
-# for viewing the point clouds
-sudo apt-get install meshlab
 ```

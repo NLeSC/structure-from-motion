@@ -123,10 +123,9 @@ To make sure you get the contents of the submodules when checking out the struct
 
 
 ```
-
 cd ${HOME}
 git clone --recursive https://github.com/NLeSC/structure-from-motion.git
-
+  
 ```
 
 
@@ -150,6 +149,7 @@ cmake ../ceres-solver-1.10.0
 make -j3
 make test
 sudo make install
+  
 ```
 
 
@@ -165,6 +165,7 @@ Next, compile bundler_sfm:
 ```
 cd ${HOME}/structure-from-motion/bundler_sfm
 make
+  
 ```
 
 
@@ -183,7 +184,8 @@ cd ${HOME}/structure-from-motion/cmvs-pmvs/program
 mkdir build
 cd build
 cmake ..
-make 
+make
+  
 ```
 
 
@@ -197,6 +199,7 @@ make
 ```
 cd ${HOME}/structure-from-motion/examples/rock
 python ../../run-sfm.py
+  
 ```
     
 ## Other

@@ -54,7 +54,7 @@ if __name__ == "__main__":
         print "#   sudo apt-get install exiftool"
         print "#   sudo apt-get install jhead"
         print "#"
-        print "# Script " + sys.argv[0] + " needs 4 arguments"
+        print "# Script " + sys.argv[0] + " needs 6 arguments"
         print "# arg1: input directory containing the video frames"
         print "# arg2: the focal length string"
         print "# arg3: the camera make string"

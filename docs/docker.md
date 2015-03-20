@@ -15,7 +15,7 @@ Quick HOWTO:
 
 3) Run ````sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion````
 
-The image can also be build from source:
+The image can also be built from source:
 
 ````
 
@@ -23,9 +23,9 @@ sudo docker build -r sfm_image .
 
 sudo docker run -u $UID -v $PWD:/data sfm_image
 ````
-
+<!---
 #
 # Alternatively, the image is also available ready-made on DockerHub:
 #
 # sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
-
+-->

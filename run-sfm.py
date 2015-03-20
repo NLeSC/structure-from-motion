@@ -329,7 +329,7 @@ CCD_WIDTHS = {
      "PENTAX Corporation  PENTAX Optio S5z"      : 5.76, # 1/2.5"
      "PENTAX Corporation  PENTAX Optio SV"       : 5.76, # 1/2.5"
      "PENTAX Corporation PENTAX Optio WP"        : 5.75, # 1/2.5"
-     "PENTAX Corporation PENTAX K10D"            : 23.5,
+     "PENTAX Corporation  PENTAX K10D"           : 23.5,
      "RICOH CaplioG3 modelM"                     : 5.27,   # 1/2.7"
      "RICOH       Caplio GX"                     : 7.176,  # 1/1.8"
      "RICOH       Caplio R30"                    : 5.75,   # 1/2.5"

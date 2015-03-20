@@ -36,7 +36,7 @@ if __name__ == "__main__":
         print "# " + sys.argv[0] + " creates a new directory '<arg2>' if it doesn't exist yet."
         print "# " + sys.argv[0] + " uses system calls to 'avconv' to split the video into frames"
         print "# You can install 'avconv' from the ubuntu repositories with:"
-        print "#   sudo apt-get install avconv"
+        print "#   sudo apt-get install libav-tools"
 
         print
         sys.exit(1)

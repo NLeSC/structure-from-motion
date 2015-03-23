@@ -33,6 +33,6 @@ This document collects some of the ideas that we never had time to look into.
 * **proposed solution:** there are a couple of tools available which calculate meshes. We experimented with using meshlab. This works OK, but scripting the mesh calculating was a bit ugly (though not impossible). Perhaps other tools can be used as well, for instance Blender&Python can do mesh and texture calculations.
 
 
-### alternative keypoint detectors
+### Alternative keypoint detectors
 * **context:** We currently use SIFT to do the keypoint detection. This works OK in principle, but has the potential drawback of being patented. 
 * * **proposed solution:** Other keypoint detectors are available, some of which are supposedly quicker (although that is not really where most time is spent, so maybe it's not worth optimizing). Avoiding license issues may be a reason to switch from SIFT to something else though. Also, it's worth investigating whether the results from different keypoint identifiers can be concatenated for a better result.

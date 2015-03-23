@@ -4,7 +4,7 @@ Here's the list:
 * [Brute force calculation of point clouds](#brute-force-calculation-of-point-clouds)
 * [Quick feedback system](#quick-feedback-system)
 * [Camera parameters sensitivity analysis](#camera-parameters-sensitivity-analysis)
-* Improve visual quality of objects [asdfd](#improve-visual-quality-of-objects)
+* Improve visual quality of objects
 * [Alternative keypoint detectors](#alternative-keypoint-detectors)
 * [Improve accuracy of key matching by adding easily identifiable objects](#improve-accuracy-of-key-matching-by-adding-easily-identifiable-objects)
 

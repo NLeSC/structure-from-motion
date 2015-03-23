@@ -1,5 +1,5 @@
-Structure from motion install guide for Ubuntu 14.10
-====================================================
+Install guide
+=============
 This install guide explains how to install the structure from motion pipeline in Ubuntu 14.10. 
 
 * [Setting up a virtual machine](#set-up-a-virtual-machine)

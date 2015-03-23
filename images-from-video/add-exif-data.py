@@ -5,7 +5,7 @@ import sys
 from subprocess import call
 
 
-class FocalLengthAdder():
+class ExifDataAdder():
 
     def __init__(self,inputDir):
 
@@ -110,9 +110,9 @@ if __name__ == "__main__":
     # make: Panasonic
     # model: HC-X900
 
-    focalLengthAdder = FocalLengthAdder(theDir)
-    focalLengthAdder.printAllExifDataForAllJPEG();
-    focalLengthAdder.updateExifData(focalLengthStr,cameraMakeStr,cameraModelStr,exifImageWidth,exifImageHeight)
-    focalLengthAdder.printAllExifDataForAllJPEG();
+    exifDataAdder = ExifDataAdder(theDir)
+    exifDataAdder.printAllExifDataForAllJPEG();
+    exifDataAdder.updateExifData(focalLengthStr,cameraMakeStr,cameraModelStr,exifImageWidth,exifImageHeight)
+    exifDataAdder.printAllExifDataForAllJPEG();
 
 

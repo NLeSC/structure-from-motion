@@ -258,6 +258,15 @@ class _CameraData:
 
 if __name__ == "__main__":
 
+   if len(sys.argv) != 2:
+      print
+      print "# Script " + sys.argv[0] + " needs 1 argument"
+      print "# arg1: input data directory that contains at least the following files:"
+      print "#  - bundle/bundle.out"
+      print "#  - prepare/list.txt"
+      print
+      sys.exit(1)
+
    arg1 = sys.argv[1]
    argIsDir = os.path.isdir(arg1)
 
@@ -274,7 +283,7 @@ if __name__ == "__main__":
       bundleFileReader.calcUpEstimation()
       bundleFileReader.writeUpEstimationAsJSON()
 
-      print bundleFileReader.boundingBoxCameras
+      print "Boundingbox [[minx, maxx],[miny,maxy],[minz,maxz]] is:" + str(bundleFileReader.boundingBoxCameras)
 
    else:
 

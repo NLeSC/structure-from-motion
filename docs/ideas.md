@@ -2,11 +2,11 @@ This document collects some of the ideas that we never had time to look into.
 
 Here's the list:
 * [Brute force calculation of point clouds](#brute-force-calculation-of-point-clouds)
-* Quick feedback system
-* Camera parameters sensitivity analysis
-* Improve visual quality of point clouds/objects
-* Alternative keypoint detectors
-* Improve accuracy of key matching by adding easily identifiable objects
+* [Quick feedback system](#quick-feedback-system)
+* [Camera parameters sensitivity analysis](#camera-parameters-sensitivity-analysis)
+* [Improve visual quality of point clouds/objects](#improve-visual-quality-of-point-clouds-objects)
+* [Alternative keypoint detectors](#alternative-keypoint-detectors)
+* [Improve accuracy of key matching by adding easily identifiable objects](#improve-accuracy-of-key-matching-by-adding-easily-identifiable-objects)
 
 <label name="brute-force-calculation-of-point-clouds">
 ### Brute force calculation of point clouds
@@ -14,7 +14,7 @@ Here's the list:
 * **proposed solution:** start construction of the point cloud using different settings, and then either combine the results, or select a good one (automatically or by asking the user for visual inspection).
 
 
-
+<label name="quick-feedback-system">
 ### Quick feedback system
 * **context:** It turns out that it is quite difficult to take 'good' pictures during data acquisition. In the Via Appia data set, we generally see at least a few images not being used for the point cloud. Furthermore, some photos generate many keypoints, while others have few, and additionally, some keypoints are really informative while others aren't. Photos can be good or bad due to various reasons, such as:
 
@@ -28,6 +28,7 @@ Here's the list:
  
 * **proposed solution:** All in all, we think the most robust way of dealing with these factors is to come up with a system that is capable of providing quick feedback to the user. We already did a lot of work on increasing the performance of the pipeline, but this is still offline. It would be good to have quick feedback on how much the pointcloud improved as a result of the photo you _just_ took. Such a setup would probably involve wireless cameras that upload their photos to a cluster/cloud, with almost immediate feedback on the number, location, coverage of keypoints; further diagnostics on the resulting sparse/dense point clouds may be provided (albeit with a small delay, perhaps in the order of minutes). This way, archeologists can quickly get a feel for what makes a good photo for their purposes, given the prevalent lighting conditions, camera settings, photograph positions, etc., ultimately resulting in higher-quality datasets.
 
+<label name="camera-parameters-sensitivity-analysis">
 ### Camera parameters sensitivity analysis
 * **context:** To get a better feel for the optimal camera model and camera settings, we could do a sensitivity analysis of different cameras, and vary the settings used on each camera
 * **proposed solution:** Vary:
@@ -36,17 +37,17 @@ Here's the list:
    * aperture
    * ISO
 
-
+<label name="improve-visual-quality-of-point-clouds-objects">
 ### Improve visual quality of point clouds/objects
 * **context:** The current pipeline spits out a point cloud, with colored points. The visual representation can still be improved by calculating meshes (surfaces between points) and then by calculating textures on top of the outer surface of objects. This is good for making visually attractive representations of the objects, and calculating meshes has the added bonus of being able to calculate certains metrics (e.g. volume, surface area) that may be of interest to archeologists.
 * **proposed solution:** there are a couple of tools available which calculate meshes. We experimented with using meshlab. This works OK, but scripting the mesh calculating was a bit ugly (though not impossible). Perhaps other tools can be used as well, for instance Blender&Python can do mesh and texture calculations.
 
-
+<label name="alternative-keypoint-detectors">
 ### Alternative keypoint detectors
 * **context:** We currently use SIFT to do the keypoint detection. This works OK in principle, but has the potential drawback of being patented. 
 * **proposed solution:** Other keypoint detectors are available, some of which are supposedly quicker (although that is not really where most time is spent, so maybe it's not worth optimizing). Avoiding license issues may be a reason to switch from SIFT to something else though. Also, it's worth investigating whether the results from different keypoint identifiers can be concatenated for a better result.
 
-
+<label name="improve-accuracy-of-key-matching-by-adding-easily-identifiable-objects">
 ### Improve accuracy of key matching by adding easily identifiable objects
 * **context:** Key matching is sometimes difficult, in particular when the object has symmetry or repeating shapes (e.g. standard windows, pillars, tiles, etc).
 * **proposed solution:** Adding small objects to the scene before the photographs are taken can help correctly stitch together the photographs. Ideally, the objects are rigid, high contrast, and uniquely identifiable from any angle and distance. Perhaps [QR codes](http://en.wikipedia.org/wiki/QR_code) could be used.

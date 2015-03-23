@@ -38,7 +38,7 @@ This document collects some of the ideas that we never had time to look into.
 * **proposed solution:** Other keypoint detectors are available, some of which are supposedly quicker (although that is not really where most time is spent, so maybe it's not worth optimizing). Avoiding license issues may be a reason to switch from SIFT to something else though. Also, it's worth investigating whether the results from different keypoint identifiers can be concatenated for a better result.
 
 
-### Improve accuracy of keymatching by adding easily identifiable objects
-* **context:** jhjls
-* **proposed solution:** swdfcsddc
+### Improve accuracy of key matching by adding easily identifiable objects
+* **context:** Key matching is sometimes difficult, in particular when the object has symmetry or repeating shapes (e.g. standard windows, pillars, tiles, etc).
+* **proposed solution:** Adding small objects to the scene before the photographs are taken can help correctly stitch together the photographs. Ideally, the objects are rigid, high contrast, and uniquely identifiable from any angle. 
 

@@ -4,7 +4,7 @@ Here's the list:
 * [Brute force calculation of point clouds](#brute-force-calculation-of-point-clouds)
 * [Quick feedback system](#quick-feedback-system)
 * [Camera parameters sensitivity analysis](#camera-parameters-sensitivity-analysis)
-* [Improve visual quality of objects](#stom-linkje)
+* Improve visual quality of objects
 * [Alternative keypoint detectors](#alternative-keypoint-detectors)
 * [Improve accuracy of key matching by adding easily identifiable objects](#improve-accuracy-of-key-matching-by-adding-easily-identifiable-objects)
 
@@ -40,10 +40,7 @@ Here's the list:
    * aperture
    * ISO
 
-sjhdbjdkl
-
-
-<label name="stom-linkje" />
+<!--- I tried adding a label here, but I couldn't for the life of me figure out why this particular link does not work while the others do -->
 
 ### Improve visual quality of point clouds/objects
 

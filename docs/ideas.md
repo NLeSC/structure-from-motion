@@ -16,7 +16,7 @@ This document collects some of the ideas that we never had time to look into.
     * photos with low contrast (dark areas such as shadows, often of the photographer; light areas such as walls and other man-made structures.
     * add to this the many settings of modern cameras, and it becomes a multidimensional nonlinear optimization problem
  
-   * **proposed solution: ** All in all, we think the most robust way of dealing with these factors is to come up with at system that is capable of providing quick feedback to the user. We already did a lot of work on increasing the performance of the pipeline, but 
+* **proposed solution:** All in all, we think the most robust way of dealing with these factors is to come up with at system that is capable of providing quick feedback to the user. We already did a lot of work on increasing the performance of the pipeline, but 
 
 
 * make meshes 

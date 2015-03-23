@@ -13,19 +13,21 @@ Quick HOWTO:
 
 2) Go to directory containing set of images
 
-3) Run ````sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion````
+3) Start the docker image. Will download image from DockerHub if needed.
+
+````
+#-u $UID used to set correct permissions for shared data folder
+#-v $PWD/data used to attach the current working directory to the
+#    /data folder inside the docker image, where the image assumes
+#    the input/output data is located/
+
+sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
+````
 
 The image can also be built from source:
 
 ````
-
 sudo docker build -r sfm_image .
 
 sudo docker run -u $UID -v $PWD:/data sfm_image
 ````
-<!---
-#
-# Alternatively, the image is also available ready-made on DockerHub:
-#
-# sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
--->

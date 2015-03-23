@@ -4,7 +4,7 @@ Here's the list:
 * [Brute force calculation of point clouds](#brute-force-calculation-of-point-clouds)
 * [Quick feedback system](#quick-feedback-system)
 * [Camera parameters sensitivity analysis](#camera-parameters-sensitivity-analysis)
-* Improve visual quality of objects
+* [Improve visual quality of objects](#stom-linkje)
 * [Alternative keypoint detectors](#alternative-keypoint-detectors)
 * [Improve accuracy of key matching by adding easily identifiable objects](#improve-accuracy-of-key-matching-by-adding-easily-identifiable-objects)
 
@@ -42,7 +42,7 @@ Here's the list:
 
 
 
-
+<label name="stom-linkje" />
 
 ### Improve visual quality of point clouds/objects
 
@@ -63,7 +63,6 @@ Here's the list:
 
 
 
-```
 
 
 
@@ -117,5 +116,3 @@ Here's the list:
 
 
 
-
-```

@@ -27,5 +27,7 @@ This document collects some of the ideas that we never had time to look into.
    * aperture
    * ISO
 
-* make meshes 
-* make texture
+
+### Improve visual quality of point clouds/objects
+* **context:** The current pipeline spits out a point cloud, with colored points. The visual representation can still be improved by calculating meshes (surfaces between points) and then by calculating textures on top of the outer surface of objects. This is good for making visually attractive representations of the objects, and calculating meshes has the added bonus of being able to calculate certains metrics (e.g. volume, surface area) that may be of interest to archeologists.
+* **proposed solution:** there are a couple of tools available which calculate meshes. We experimented with using meshlab. This works OK, but scripting the mesh calculating was a bit ugly (though not impossible). Perhaps other tools can be used as well, for instance Blender&Python can do mesh and texture calculations.

@@ -1,13 +1,14 @@
 This document collects some of the ideas that we never had time to look into.
 
 Here's the list:
-* Brute force calculation of point clouds
+* [Brute force calculation of point clouds](#brute-force-calculation-of-point-clouds)
 * Quick feedback system
 * Camera parameters sensitivity analysis
 * Improve visual quality of point clouds/objects
 * Alternative keypoint detectors
 * Improve accuracy of key matching by adding easily identifiable objects
 
+<label name="brute-force-calculation-of-point-clouds">
 ### Brute force calculation of point clouds
 * **context:** In our experience it is difficult to know which optimal settings to use when constructing a point cloud. There are many knobs to turn, and it's often not clear how the settings interact in terms of performance, memory requirements, quality of the result point cloud, etc.
 * **proposed solution:** start construction of the point cloud using different settings, and then either combine the results, or select a good one (automatically or by asking the user for visual inspection).

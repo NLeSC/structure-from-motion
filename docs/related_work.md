@@ -6,11 +6,9 @@ List of SFM Tools
 Integrated tools for SFM
 ------------------------
 
-https://github.com/dddExperiments/SFMToolkit
-
-http://www.visual-experiments.com/demos/sfmtoolkit/
-
-Theia: http://cs.ucsb.edu/~cmsweeney/theia/sfm.html
+https://github.com/dddExperiments/SFMToolkit  
+http://www.visual-experiments.com/demos/sfmtoolkit/  
+Theia: http://cs.ucsb.edu/~cmsweeney/theia/sfm.html  
 
 Keypoint Detection
 ------------------------
@@ -18,7 +16,7 @@ Keypoint Detection
 
 Image libraries that contain SIFT/SURF/BRISK
 
-http://opencv.org/about.html
+http://opencv.org/about.html  
 (An example:  http://stackoverflow.com/questions/5461148/sift-implementation-with-opencv-2-2)
 
 http://www.vlfeat.org/
@@ -27,11 +25,11 @@ http://www.vlfeat.org/
 
 Good explanation of what sift does:
 
-http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/
+http://www.aishack.in/2010/05/sift-scale-invariant-feature-transform/  
 
 Original sift:
 
-http://www.cs.ubc.ca/~lowe/keypoints/
+http://www.cs.ubc.ca/~lowe/keypoints/  
 
 Some alternative implementations of sift:
 
@@ -51,32 +49,26 @@ Bundle adjustment
 -----------------
 
 Bundler Tool  
-Noah Snavely  
-Cornell University  
-Department of Computer Science  
-Cornell Graphics and Vision Group  
+
 http://www.cs.cornell.edu/~snavely/  
 https://github.com/snavely  
 
-http://www.cs.cornell.edu/~snavely/bundler/
-https://github.com/snavely/bundler_sfm
-http://grail.cs.washington.edu/projects/mcba/
-
+http://grail.cs.washington.edu/projects/mcba/  
 
 
 Clustering
 ----------
 
-http://www.di.ens.fr/pmvs/
-http://www.di.ens.fr/cmvs/
+http://www.di.ens.fr/pmvs/  
+http://www.di.ens.fr/cmvs/  
 
 Misc
 ----
 
 These libraries are used by some of the steps:
 
-http://www.cs.utexas.edu/users/dml/Software/graclus.html
-http://ceres-solver.org/
+http://www.cs.utexas.edu/users/dml/Software/graclus.html  
+http://ceres-solver.org/  
 
 
 Relevant Papers

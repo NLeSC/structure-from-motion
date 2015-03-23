@@ -31,3 +31,8 @@ This document collects some of the ideas that we never had time to look into.
 ### Improve visual quality of point clouds/objects
 * **context:** The current pipeline spits out a point cloud, with colored points. The visual representation can still be improved by calculating meshes (surfaces between points) and then by calculating textures on top of the outer surface of objects. This is good for making visually attractive representations of the objects, and calculating meshes has the added bonus of being able to calculate certains metrics (e.g. volume, surface area) that may be of interest to archeologists.
 * **proposed solution:** there are a couple of tools available which calculate meshes. We experimented with using meshlab. This works OK, but scripting the mesh calculating was a bit ugly (though not impossible). Perhaps other tools can be used as well, for instance Blender&Python can do mesh and texture calculations.
+
+
+### alternative keypoint detectors
+* **context:** We currently use SIFT to do the keypoint detection. This works OK in principle, but has the potential drawback of being patented. 
+* * **proposed solution:** Other keypoint detectors are available, some of which are supposedly quicker (although that is not really where most time is spent, so maybe it's not worth optimizing). Avoiding license issues may be a reason to switch from SIFT to something else though. Also, it's worth investigating whether the results from different keypoint identifiers can be concatenated for a better result.

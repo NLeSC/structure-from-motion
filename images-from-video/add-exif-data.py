@@ -3,6 +3,8 @@
 import os
 import sys
 from subprocess import call
+from PIL import Image
+from PIL.ExifTags import TAGS as exifTags
 
 
 class FocalLengthAdder():
@@ -19,7 +21,17 @@ class FocalLengthAdder():
             if (file[-4:] in ['.jpg','.JPG'] or file[-5:] in ['.jpeg','.JPEG']):
 
                 call(["jhead", os.path.join(self.inputDir,file)])
+                
+                tags = {}
+                with open(os.path.join(self.inputDir,file), 'rb') as fid:
+                    img = Image.open(fid)
+                    if hasattr(img, '_getexif'):
+                        exifinfo = img._getexif()
+                        if exifinfo is not None:
+                            for tag, value in exifinfo.items():
+                                tags[exifTags.get(tag, tag)] = value
 
+                print tags
 
 
     def updateExifData(self, focalLengthStr,cameraMakeStr,cameraModelStr,exifImageWidth,exifImageHeight):

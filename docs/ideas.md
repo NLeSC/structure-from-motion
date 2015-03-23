@@ -36,3 +36,9 @@ This document collects some of the ideas that we never had time to look into.
 ### Alternative keypoint detectors
 * **context:** We currently use SIFT to do the keypoint detection. This works OK in principle, but has the potential drawback of being patented. 
 * **proposed solution:** Other keypoint detectors are available, some of which are supposedly quicker (although that is not really where most time is spent, so maybe it's not worth optimizing). Avoiding license issues may be a reason to switch from SIFT to something else though. Also, it's worth investigating whether the results from different keypoint identifiers can be concatenated for a better result.
+
+
+### Improve accuracy of keymatching by adding easily identifiable objects
+* **context:** jhjls
+* **proposed solution:** swdfcsddc
+

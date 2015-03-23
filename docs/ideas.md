@@ -40,5 +40,5 @@ This document collects some of the ideas that we never had time to look into.
 
 ### Improve accuracy of key matching by adding easily identifiable objects
 * **context:** Key matching is sometimes difficult, in particular when the object has symmetry or repeating shapes (e.g. standard windows, pillars, tiles, etc).
-* **proposed solution:** Adding small objects to the scene before the photographs are taken can help correctly stitch together the photographs. Ideally, the objects are rigid, high contrast, and uniquely identifiable from any angle. Perhaps [QR codes](http://en.wikipedia.org/wiki/QR_code) could be used.
+* **proposed solution:** Adding small objects to the scene before the photographs are taken can help correctly stitch together the photographs. Ideally, the objects are rigid, high contrast, and uniquely identifiable from any angle and distance. Perhaps [QR codes](http://en.wikipedia.org/wiki/QR_code) could be used.
 

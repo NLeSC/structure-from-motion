@@ -200,6 +200,8 @@ make
 <a name="run-an-example"></a>
 ## Running an example
 
+The pipeline can be started by ``cd``'ing into a data directory, and starting the 'run-sfm.py' script from there:
+
 ```
 cd ${HOME}/structure-from-motion/examples/rock
 python ../../run-sfm.py

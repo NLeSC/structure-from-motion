@@ -19,11 +19,13 @@ This document collects some of the ideas that we never had time to look into.
  
 * **proposed solution:** All in all, we think the most robust way of dealing with these factors is to come up with a system that is capable of providing quick feedback to the user. We already did a lot of work on increasing the performance of the pipeline, but this is still offline. It would be good to have quick feedback on how much the pointcloud improved as a result of the photo you _just_ took. Such a setup would probably involve wireless cameras that upload their photos to a cluster/cloud, with almost immediate feedback on the number, location, coverage of keypoints; further diagnostics on the resulting sparse/dense point clouds may be provided (albeit with a small delay, perhaps in the order of minutes). This way, archeologists can quickly get a feel for what makes a good photo for their purposes, given the prevalent lighting conditions, camera settings, photograph positions, etc., ultimately resulting in higher-quality datasets.
 
+### Camera parameters sensitivity analysis
+* **context:** To get a better feel for the optimal camera model and camera settings, we could do a sensitivity analysis of different cameras, and vary the settings used on each camera
+* **proposed solution:** Vary:
+   * camera model
+   * flash settings
+   * aperture
+   * ISO
 
 * make meshes 
 * make texture
-* experiment with different camera settings, 
-  * flash settings
-  * camera type
-  * aperture
-  * ISO

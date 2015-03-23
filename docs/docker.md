@@ -24,6 +24,14 @@ Quick HOWTO:
 sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
 ````
 
+By default the image will run the entire structure-from-motion pipeline on all images in the current working directory. If instead you would like a terminal settion to play around with the image try this command:
+
+````
+sudo docker run -u $UID -v $PWD:/data -i -t nlesc/structure-from-motion /bin/bash
+````
+
+The main script to run the pipeline is located at '/sfm/run-sfm.py'
+
 The image can also be built from source:
 
 ````

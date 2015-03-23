@@ -67,7 +67,7 @@ CMVS/PMVS2
 ----------
 
 After estimating the camera positions, PMVS2 is used to estimate the 3D positions of object points. Before 
-PMVS2 is run, CMVS is used to read the output of bundler and create a configuration file for PMVS2 in `pmvs/option-000`. In this configuration file specifies which images should be used for the reconstruction, and at what resolution the input images should be used. In this configuration file, the following settings are important:
+PMVS2 is run, CMVS is used to read the output of bundler and create a configuration file for PMVS2 in `pmvs/option-0000`. In this configuration file specifies which images should be used for the reconstruction, and at what resolution the input images should be used. In this configuration file, the following settings are important:
 
 - ``timages`` the images actually used in the reconstruction of the 3D object. Usually only a subset of the input images is used. 
 

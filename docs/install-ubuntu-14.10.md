@@ -41,7 +41,7 @@ Next, start your virtual ubuntu image, log in, start a terminal (default keybind
 
     sudo apt-get install virtualbox-guest-dkms 
 
-These packages help you run the guest operating system at the same resolution as the host. Installing these packages obfuscates the need to re-install the [guest additions](https://www.virtualbox.org/manual/ch04.html#idp96641072) every time you update the host's kernel.
+These packages help you run the guest operating system at the same resolution as the host. Installing this package obfuscates the need to re-install the [guest additions](https://www.virtualbox.org/manual/ch04.html#idp96641072) every time you update the host's kernel.
 
 
 We also installed the following packages:

@@ -9,11 +9,11 @@ Our image can be found here: https://registry.hub.docker.com/u/nlesc/structure-f
 
 Quick HOWTO:
 
-1) Install Docker
-
-2) Go to directory containing set of images
-
-3) Start the docker image. Will download image from DockerHub if needed.
+1. Install Docker
+ 
+   ```sudo apt-get install docker.io```
+1. Go to directory containing set of images
+1. Start the docker image. Will download image from DockerHub if needed.
 
 ````
 #-u $UID used to set correct permissions for shared data folder

@@ -245,6 +245,7 @@ CCD_WIDTHS = {
      "NIKON CORPORATION NIKON D70s"              : 23.7,
      "NIKON CORPORATION NIKON D80"               : 23.6,
      "NIKON CORPORATION NIKON D90"               : 23.6,
+     "NIKON CORPORATION NIKON D3300"             : 23.5,
      "NIKON E2500"                               : 5.27,   # 1/2.7"
      "NIKON E2500"                               : 5.27,   # 1/2.7"
      "NIKON E3100"                               : 5.27,   # 1/2.7"

@@ -13,7 +13,6 @@ Theia: http://cs.ucsb.edu/~cmsweeney/theia/sfm.html
 Keypoint Detection
 ------------------------
 
-
 Image libraries that contain SIFT/SURF/BRISK
 
 http://opencv.org/about.html  
@@ -55,6 +54,20 @@ https://github.com/snavely
 
 http://grail.cs.washington.edu/projects/mcba/  
 
+
+Theia 
+
+https://github.com/sweeneychris/TheiaSfM
+
+Theia is an alternative to bundler (and the processing pipeline proceeding bundler). 
+It consists of a library containing all the elements needed to do bundle adjustment
+(keypoint detection, keypoint matching, etc.) and contains several example applications 
+implementing the entire pipeline. Theia contains several state-of-the-art algorithms, 
+such as a cascade hashing based keypoint matching, and a global SfM approach that 
+considers the entire view graph at the same time instead of incrementally adding 
+more and more images to the reconstruction. Late 2014, Theia was still in active 
+development and not completely stable, but it is likely to become an efficient 
+replacement for bundler. 
 
 Clustering
 ----------

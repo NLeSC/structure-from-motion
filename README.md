@@ -14,10 +14,10 @@ This repo contains a complete _Structure from Motion_ pipeline. Structure from M
 
 
 
-Overview
+Example
 --------
 
-![pipeline](docs/images/sfm.png "SFM Pipeline")
+![example-output](docs/images/example-output.png "Example Output")
 
 
 Copyrights & Disclaimers

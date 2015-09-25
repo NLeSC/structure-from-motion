@@ -1,6 +1,6 @@
 The example folder (examples/rock) contains an example input for the pipeline, in this case a rock.
 
-The pipeline can be started by cd'ing into the data directory, and starting the 'run-sfm.py' script from there:
+After [installing](install-ubuntu-14.10.md), the pipeline can be started by cd'ing into the data directory, and starting the 'run-sfm.py' script from there:
 
 ```
 $ cd ${HOME}/structure-from-motion/examples/rock

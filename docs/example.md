@@ -14,6 +14,8 @@ $ cd examples/rock
 $ sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
 ```
 
+Viewing the resulting sparse pointcloud (in bundle/bundle.out) and dense pointcloud (in pmvs/models/optio-0000.ply) with for example [meshlab](http://meshlab.sourceforge.net/)
+
 To test if the point cloud was correctly generated, you can use a test script which prints the number of points in the generated cloud:
 
 ```

@@ -20,7 +20,7 @@ To test if the point cloud was correctly generated, you can use a test script wh
 
 ```
 $ cd ${HOME}/structure-from-motion
-$ test/number-of-points.py examples/rock
+$ test/number_of_points.py examples/rock
 
 # Using 'bundle.out' file from here: examples/rock/bundle/bundle.out
 # Using 'option-0000.ply' from here: examples/rock/pmvs/models/option-0000.ply

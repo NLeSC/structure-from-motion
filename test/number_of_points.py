@@ -70,6 +70,10 @@ class NumberOfPointsReader:
 
 if __name__ == "__main__":
 
+   if len(sys.argv) is not 2:
+       sys.exit(sys.argv[0] + " needs exactly one argument: the folder containing the output of the sfm pipeline")
+
+
    arg1 = sys.argv[1]
    argIsDir = os.path.isdir(arg1)
 

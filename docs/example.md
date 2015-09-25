@@ -7,7 +7,7 @@ $ cd ${HOME}/structure-from-motion/examples/rock
 $ python ../../run-sfm.py
 ```
 
-Alternatively, the docker image can be used, see [here](docker.md)
+Alternatively, the docker image can be used, see [here](docker.md).
 
 ```
 $ cd examples/rock

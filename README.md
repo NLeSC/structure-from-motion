@@ -19,6 +19,10 @@ Example
 
 ![example-output](docs/images/example-output.png "Example Output")
 
+This software includes a small example, in this case [a rock on the parking lot outside of our building](https://www.google.com/maps/place/52%C2%B021'24.6%22N+4%C2%B057'15.1%22E/@52.356789,4.9542065,49m/data=!3m1!1e3!4m2!3m1!1s0x0:0x0). See [here](docs/example.md) for some info on how to test the pipeline on the example.
+
+
+
 
 Copyrights & Disclaimers
 ------------------------

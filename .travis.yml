@@ -1,0 +1,14 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+before_install:
+- docker pull nlesc/structure-from-motion
+
+script:
+- docker run -v examples/rock:/data nlesc/structure-from-motion
+- python test/test_rock.py examples/rock
+- 

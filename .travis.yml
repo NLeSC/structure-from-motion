@@ -11,4 +11,3 @@ before_install:
 script:
 - docker run -v $TRAVIS_BUILD_DIR/examples/rock:/data nlesc/structure-from-motion
 - python test/test_rock.py examples/rock
-- 

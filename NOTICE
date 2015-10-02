@@ -1,0 +1,6 @@
+Structure From Motion Pipeline
+Copyright 2015 The Netherlands eScience Center
+
+This software contains Bundler, which is copyright 2008-2013 Noah Snavely (snavely@cs.cornell.edu). See https://github.com/snavely/bundler_sfm
+
+This software contains CMVS-PMVS. See https://github.com/pmoulon/CMVS-PMVS

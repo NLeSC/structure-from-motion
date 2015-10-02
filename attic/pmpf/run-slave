@@ -1,0 +1,33 @@
+#!/bin/bash
+
+HOST=fs0
+PORT=19876
+
+while true
+do
+	#Talk to server, get next directory name
+	DIR=`nc $HOST $PORT`
+
+	#Check if netcat reported an error
+	if [ "$?" -ne "0" ]; then
+		echo "Failed to contact server"
+		exit 1
+	fi
+
+	echo "GOT DIR $DIR"
+
+	if [ "$DIR" = "exit" ]
+	then
+		#Exit is magic string send by server if we are done
+		echo "server says we're done"
+		exit
+	else
+		#Insert actual processing script call here
+		echo "running next dir: $DIR"
+                cd /var/scratch/jason/patty/
+                cp -r SITES_image_based/$DIR processed/$DIR
+                cd processed/$DIR
+                time /var/scratch/jason/patty/code/bundler-v0.4-source/RunBundler.sh 2>&1 >RunBundler.log
+	fi
+done
+

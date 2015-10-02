@@ -1,0 +1,5 @@
+ceres-bin/
+ceres-solver-1.10.0.tar.gz
+ceres-solver-1.10.0/
+examples/SITE_*/
+*.pyc

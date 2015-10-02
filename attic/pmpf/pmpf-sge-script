@@ -1,0 +1,20 @@
+#!/bin/sh
+#$ -S /bin/sh
+#$ -N patty
+#$ -l h_rt=24:00:00
+#$ -wd /var/scratch/jason/patty
+#$ -pe javagat 1
+
+echo "script running"
+
+cat $PE_HOSTFILE
+
+for host in `cat $PE_HOSTFILE | cut -d " " -f 1` ; do
+	for i in {0..7}
+	do
+  		ssh -o StrictHostKeyChecking=false $host "cd `pwd` && /var/scratch/jason/patty/code/PattyAnalytics/scripts/pmpf/run-slave"&
+	done
+done
+
+wait
+exit 0

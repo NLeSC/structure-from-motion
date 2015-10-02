@@ -1,0 +1,6 @@
+[submodule "bundler_sfm"]
+	path = bundler_sfm
+	url = https://github.com/NLeSC/bundler_sfm
+[submodule "cmvs-pmvs"]
+	path = cmvs-pmvs
+	url = https://github.com/NLeSC/CMVS-PMVS

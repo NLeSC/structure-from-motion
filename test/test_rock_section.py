@@ -18,7 +18,10 @@ print "number points in dense pointcloud " + sys.argv[1] + ": " + str(nopReader.
 if nopReader.nPointsSparse != 4041:
     sys.exit("error! incorrect amount of sparse points!")
 
-if nopReader.nPointsDense != 932964:
-    sys.exit("error! incorrect amount of dense points!")
+if nopReader.nPointsDense < 80000:
+    sys.exit("error! to few dense points! Expect at least 80000")
+
+if nopReader.nPointsDense > 100000:
+    sys.exit("error! to few dense points! Expect 100000 at maximum")
 
 print "test ok: output contains the expected number of points"

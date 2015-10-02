@@ -9,6 +9,6 @@ before_install:
 - docker pull nlesc/structure-from-motion
 
 script:
-- docker run -v $TRAVIS_BUILD_DIR/examples/rock-section:/data nlesc/structure-from-motion
+- docker run -u $UID -v $TRAVIS_BUILD_DIR/examples/rock-section:/data nlesc/structure-from-motion
 - find $TRAVIS_BUILD_DIR
 - python test/test_rock_section.py $TRAVIS_BUILD_DIR/examples/rock-section

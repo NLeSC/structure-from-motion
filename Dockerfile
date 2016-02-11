@@ -14,7 +14,7 @@
 #
 # sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
 
-FROM ubuntu:14.10
+FROM ubuntu:14.04
 MAINTAINER Niels Drost <n.drost@esciencecenter.nl>
 RUN apt-get update && apt-get install -y cmake gfortran libgoogle-glog-dev libatlas-base-dev libeigen3-dev libsuitesparse-dev zlib1g-dev libjpeg-dev libboost-dev python-pil git build-essential wget
 

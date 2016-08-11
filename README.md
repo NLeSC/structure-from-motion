@@ -3,7 +3,7 @@ Structure From Motion Pipeline
 
 [![Build Status](https://travis-ci.org/NLeSC/structure-from-motion.svg?branch=develop)](https://travis-ci.org/NLeSC/structure-from-motion)
 
-<!-- [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.45926.svg)](http://dx.doi.org/10.5281/zenodo.45926) -->
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.45937.svg)](http://dx.doi.org/10.5281/zenodo.45937)
 
 This repo contains a complete _Structure from Motion_ pipeline. Structure from Motion is a technique to construct a 3-D point cloud from a set of images (or a video) of an object. The software in this repository relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.
 

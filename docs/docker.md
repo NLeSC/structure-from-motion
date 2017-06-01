@@ -21,13 +21,13 @@ Quick HOWTO:
 #    /data folder inside the docker image, where the image assumes
 #    the input/output data is located/
 
-sudo docker run -u $UID -v $PWD:/data nlesc/structure-from-motion
+sudo docker run -u $UID -v "$PWD:/data" nlesc/structure-from-motion
 ````
 
 By default the image will run the entire structure-from-motion pipeline on all images in the current working directory. If instead you would like a terminal settion to play around with the image try this command:
 
 ````
-sudo docker run -u $UID -v $PWD:/data -i -t nlesc/structure-from-motion /bin/bash
+sudo docker run -u $UID -v "$PWD:/data" -i -t nlesc/structure-from-motion /bin/bash
 ````
 
 The main script to run the pipeline is located at '/sfm/run-sfm.py'

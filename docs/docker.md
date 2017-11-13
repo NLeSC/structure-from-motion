@@ -5,7 +5,7 @@ To facilitate running the pipeline with as little effort as possible we have cre
 
 Docker is a system for fast deployment of applications using virtual machines. See here for more information: https://www.docker.com/
 
-Our image can be found here: https://registry.hub.docker.com/r/nlesc/structure-from-motion
+Our image can be found here: https://hub.docker.com/r/nlesc/structure-from-motion/
 
 Quick HOWTO:
 

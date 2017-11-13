@@ -17,7 +17,7 @@ Download Ubuntu iso from:
 
 [http://releases.ubuntu.com/14.10/ubuntu-14.10-desktop-amd64.iso](http://releases.ubuntu.com/14.10/ubuntu-14.10-desktop-amd64.iso)
 
-Create image in VirtualBox and install Ubuntu. 
+Create image in [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install Ubuntu. 
 
 I configured virtualbox to use:
 

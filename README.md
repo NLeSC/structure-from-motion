@@ -13,7 +13,7 @@ This repo contains a complete _Structure from Motion_ pipeline. Structure from M
 * The current pipeline has many options that can be configured. [This document](/docs/tuning_guide.md) describes which option does what and how it affects the characteristics of the resulting point cloud;
 * [This](docs/related_work.md) document lists a couple of key people, their websites, and tools;
 * [Here](docs/ideas.md) we describe some ideas we never found time to look into;
-* You can run the pipeline with [docker](https://www.docker.com/) [using this image](https://registry.hub.docker.com/u/nlesc/structure-from-motion). Find the instructions [here](docs/docker.md).
+* You can run the pipeline with [docker](https://www.docker.com/) [using this image](https://hub.docker.com/r/nlesc/structure-from-motion/). Find the instructions [here](docs/docker.md).
 
 
 

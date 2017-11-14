@@ -201,3 +201,4 @@ cd ${HOME}/structure-from-motion/examples/rock
 python ../../run-sfm.py
   
 ```
+On my laptop the example finished in 1 hour. After finishing, you can open a .ply file from ```${HOME}/structure-from-motion/examples/rock/bundle``` with MeshLab to see the outcome. 

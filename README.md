@@ -3,6 +3,8 @@ Structure From Motion Pipeline
 
 [![Build Status](https://travis-ci.org/NLeSC/structure-from-motion.svg?branch=develop)](https://travis-ci.org/NLeSC/structure-from-motion)
 
+Please cite the tool with its DOI if you are using it in your scientific publication:
+
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.45937.svg)](http://dx.doi.org/10.5281/zenodo.45937)
 
 This repo contains a complete _Structure from Motion_ pipeline. Structure from Motion is a technique to construct a 3-D point cloud from a set of images (or a video) of an object. The software in this repository relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.
@@ -11,9 +13,9 @@ This repo contains a complete _Structure from Motion_ pipeline. Structure from M
 * Go [here](docs/install-ubuntu-14.10.md) for the installation instructions;
 * A conceptual overview of the pipeline is documented [here](docs/structure_from_motion.md);
 * The current pipeline has many options that can be configured. [This document](/docs/tuning_guide.md) describes which option does what and how it affects the characteristics of the resulting point cloud;
-* [This](docs/related_work.md) document lists a couple of key people, their websites, and tools;
+* [This document](docs/related_work.md) lists a couple of key people, their websites, and tools;
 * [Here](docs/ideas.md) we describe some ideas we never found time to look into;
-* You can run the pipeline with [docker](https://www.docker.com/) [using this image](https://registry.hub.docker.com/u/nlesc/structure-from-motion). Find the instructions [here](docs/docker.md).
+* You can run the pipeline with [docker](https://www.docker.com/) using [this docker image](https://hub.docker.com/r/nlesc/structure-from-motion/). Find the instructions [here](docs/docker.md).
 
 
 

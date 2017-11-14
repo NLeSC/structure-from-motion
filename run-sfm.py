@@ -699,12 +699,13 @@ def run_bundler():
         BIN_GEN_OPTION = os.path.join(CMVS_PMVS_BIN_PATH, "genOption")
         BIN_PMVS2 = os.path.join(CMVS_PMVS_BIN_PATH, "pmvs2")
 
+    step,totalsteps = 1,6
+
     # Create list of images
-    print "[- Creating list of images -]"
+    print "[- Step %d/%d Creating list of images -]" % (step,totalsteps)
     images = get_images()
-
+    step += 1
     time1 = time.time()
-
     if len(images) < 10:
        print "ERROR: not enough images (have %d, need at least 10)" % len(images)
        exit(1)
@@ -712,13 +713,11 @@ def run_bundler():
        print "[- Retrieved %d images in %.1f seconds -]" % (len(images), time1-start)
 
     # Extract focal length
-    print "[- Extracting EXIF tags from images -]"
+    print "[- Step %d/%d Extracting EXIF tags from images -]" % (step,totalsteps)
     images_focal = extract_focal_length(images)
-
+    step += 1
     time2 = time.time()
-
     print "[- Retrieved EXIF tags of %d images in %.1f seconds -]" % (len(images_focal), time2-time1)
-
     if not len(images_focal) == len(images):
        print "ERROR: some images are missing necessasy EXIF information!"
        exit(1)
@@ -727,27 +726,23 @@ def run_bundler():
     save_image_list(images_focal)
 
     # Extract SIFT features from images
-    print "[- Extracting keypoints -]"
+    print "[- Step %d/%d Extracting keypoints -]" % (step,totalsteps)
     key_files = sift_images(images)
-
+    step += 1
     time3 = time.time()
-
     print "[- Extracting keypoints took %.1f seconds -]" % (time3-time2)
 
     # Match images
-    print "[- Matching keypoints (this can take a while) -]"
-
+    print "[- Step %d/%d Matching keypoints (this can take a while) -]" % (step,totalsteps)
     matches_file = "matches.init.txt"
     match_images(key_files, matches_file)
-
+    step += 1
     time4 = time.time()
-
     print "[- Matching keypoints took %.1f seconds -]" % (time4-time3)
 
     # Run Bundler
 
-    print "[- Running Bundler (sparse pointcloud generation) -]"
-
+    print "[- Step %d/%d Running Bundler (sparse pointcloud generation) -]" % (step,totalsteps)
     bundler(image_list='list.txt',
             options_file="options.txt",
             match_table=matches_file,
@@ -763,21 +758,17 @@ def run_bundler():
             construct_max_connectivity=True,
             use_ceres=True,
             run_bundle=True)
-
+    step += 1
     time5 = time.time()
-
     print "[- Bundler took %.1f seconds-]" % (time5-time4)
 
-    print "[- Creating CMVS/PMVS configuration and running PMVS2 -]"
-
+    print "[- Step %d/%d Creating CMVS/PMVS configuration and running PMVS2 -]" % (step,totalsteps)
     create_dense_pointcloud(images, image_list='list.txt', bundle_out="bundle.out")
-
+    step += 1
     end = time.time()
-
     print "[- Creating dense point cloud took %.1f seconds -]" % (end-time5)
 
     print "[- Done in %.1f seconds -]" % (end-start)
 
 if __name__ == '__main__':
     run_bundler()
-

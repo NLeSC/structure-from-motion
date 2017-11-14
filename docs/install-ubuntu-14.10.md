@@ -2,22 +2,22 @@ Install guide
 =============
 This install guide explains how to install the structure from motion pipeline in Ubuntu 14.10. 
 
-* [Setting up a virtual machine](#set-up-a-virtual-machine)
+* [Setting up a virtual machine (optional)](#set-up-a-virtual-machine)
 * [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories)
 * [Downloading and installing other tools](#download-and-install-other-tools)
 * [Running an example](#run-an-example)
 
 <a name="set-up-a-virtual-machine"></a>
-## Setting up a virtual machine
+## Setting up a virtual machine (optional)
 
 
-Creating a virtual machine is an optional step. Go on to [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories) if you decide to skip this step.
+Creating a virtual machine is an optional step, for example, if you are using Windows. You can skip this step and go directly to [Installing packages from Ubuntu repositories](#install-packages-from-ubuntu-repositories) instead. 
 
-Download Ubuntu iso from:
+Download and install the latest [VirtualBox](https://www.virtualbox.org/wiki/Downloads) if you have't already. 
 
-[http://releases.ubuntu.com/14.10/ubuntu-14.10-desktop-amd64.iso](http://releases.ubuntu.com/14.10/ubuntu-14.10-desktop-amd64.iso)
+Download the latest [Ubuntu](https://www.ubuntu.com/download/desktop) iso. 
 
-Create image in [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install Ubuntu. 
+Create an image in VirtualBox and install Ubuntu. 
 
 I configured virtualbox to use:
 
@@ -37,24 +37,18 @@ These options are mainly determined by the limitations of the machine you run on
 
 Start the virtual machine, install Ubuntu from the iso we just downloaded. Tick the box about downloading any available updates when installing.
 
-Next, start your virtual ubuntu image, log in, start a terminal (default keybinding Ctrl-Alt-t) and install virtualbox guest additions:
-
-    sudo apt-get install virtualbox-guest-dkms 
-
-These packages help you run the guest operating system at the same resolution as the host. Installing this package obfuscates the need to re-install the [guest additions](https://www.virtualbox.org/manual/ch04.html#idp96641072) every time you update the guest's kernel.
-
-
-We also installed the following packages:
+We also installed the following optional packages:
 
     sudo apt-get install virtualbox-guest-utils 
     sudo apt-get install virtualbox-guest-x11
     
 Doing so allows you to share the clipboard between the host and the guest.
 
+
 <a name="install-packages-from-ubuntu-repositories"></a>
 ## Installing packages from the Ubuntu repositories
 
-Once you have Ubuntu 14.10 up and running we need to install the necessary tools and libraries. Open a terminal  and install the following packages:
+Once you have Ubuntu up and running we need to install the necessary tools and libraries. Open a terminal  and install the following packages:
 
 ```
 # git

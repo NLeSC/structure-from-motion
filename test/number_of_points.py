@@ -4,7 +4,7 @@ import os
 import sys
 
 
-class NumberOfPointsReader:
+class NumberOfPointsReader(object):
 
    def __init__(self,theDir):
 
@@ -95,4 +95,3 @@ if __name__ == "__main__":
    else:
 
       print "Input argument should be a directory. Aborting."
-

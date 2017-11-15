@@ -15,11 +15,7 @@ script:
 - docker exec test pip install coveralls
 - travis_wait docker exec -t test coverage run /sfm/run-sfm.py
 - docker exec test coverage report
+- docker exec test COVERALLS_REPO_TOKEN=ZtEZQsH2ivrpUHyclN37tpZE2hWREcXz6 coveralls
 - docker exec test chown -R $UID /data
 - docker rm -f test
 - python test/test_rock_section.py $TRAVIS_BUILD_DIR/examples/rock-section
-
-after_success:
-- pip install coveralls
-- cd $TRAVIS_BUILD_DIR/examples/rock-section
-- coveralls

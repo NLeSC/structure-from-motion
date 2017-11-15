@@ -13,9 +13,10 @@ script:
 - docker exec test apt-get update
 - docker exec test apt-get install -y python-pip python-dev build-essential
 - docker exec test pip install coveralls
-- travis_wait docker exec -t test coverage run /sfm/run-sfm.py
+- travis_wait docker exec -t test coverage run --source=/sfm /sfm/run-sfm.py
 - docker exec test coverage report
-- docker exec test COVERALLS_REPO_TOKEN=ZtEZQsH2ivrpUHyclN37tpZE2hWREcXz6 coveralls
+- docker exec test export COVERALLS_REPO_TOKEN=ZtEZQsH2ivrpUHyclN37tpZE2hWREcXz6
+- docker exec test coveralls
 - docker exec test chown -R $UID /data
 - docker rm -f test
 - python test/test_rock_section.py $TRAVIS_BUILD_DIR/examples/rock-section

@@ -5,7 +5,7 @@ import sys
 from subprocess import call
 
 
-class ExifDataAdder():
+class ExifDataAdder(object):
 
     def __init__(self,inputDir):
 
@@ -14,19 +14,19 @@ class ExifDataAdder():
 
     def printAllExifDataForAllJPEG(self):
 
-        for file in sorted(os.listdir(self.inputDir)):
+        for fname in sorted(os.listdir(self.inputDir)):
 
-            if (file[-4:] in ['.jpg','.JPG'] or file[-5:] in ['.jpeg','.JPEG']):
+            if (fname[-4:] in ['.jpg','.JPG'] or fname[-5:] in ['.jpeg','.JPEG']):
 
-                call(["jhead", os.path.join(self.inputDir,file)])
+                call(["jhead", os.path.join(self.inputDir,fname)])
 
 
 
     def updateExifData(self, focalLengthStr,cameraMakeStr,cameraModelStr,exifImageWidth,exifImageHeight):
 
-        for file in sorted(os.listdir(self.inputDir)):
+        for fname in sorted(os.listdir(self.inputDir)):
 
-            if (file[-4:] in ['.jpg','.JPG'] or file[-5:] in ['.jpeg','.JPEG']):
+            if (fname[-4:] in ['.jpg','.JPG'] or fname[-5:] in ['.jpeg','.JPEG']):
 
                 call(["exiftool",
                 "-FocalLength=" + focalLengthStr,
@@ -36,7 +36,7 @@ class ExifDataAdder():
                 "-ExifImageWidth=" + exifImageWidth,
                 "-ExifImageHeight=" + exifImageHeight,
                 "-overwrite_original",
-                 os.path.join(self.inputDir,file)])
+                 os.path.join(self.inputDir,fname)])
 
 
 
@@ -76,33 +76,33 @@ if __name__ == "__main__":
 
     try:
         focalLengthStr = sys.argv[2]
-    except:
+    except IndexError:
         print "An error occurred."
         sys.exit(1)
 
 
     try:
         cameraMakeStr = sys.argv[3]
-    except:
+    except IndexError:
         print "An error occurred."
         sys.exit(1)
 
 
     try:
         cameraModelStr = sys.argv[4]
-    except:
+    except IndexError:
         print "An error occurred."
         sys.exit(1)
 
     try:
         exifImageWidth = sys.argv[5]
-    except:
+    except IndexError:
         print "An error occurred."
         sys.exit(1)
 
     try:
         exifImageHeight = sys.argv[6]
-    except:
+    except IndexError:
         print "An error occurred."
         sys.exit(1)
 
@@ -114,5 +114,3 @@ if __name__ == "__main__":
     exifDataAdder.printAllExifDataForAllJPEG();
     exifDataAdder.updateExifData(focalLengthStr,cameraMakeStr,cameraModelStr,exifImageWidth,exifImageHeight)
     exifDataAdder.printAllExifDataForAllJPEG();
-
-

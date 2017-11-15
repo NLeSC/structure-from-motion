@@ -78,37 +78,36 @@ for f in $files; do
 
     # doing math in Bash
 
-    curWidth=`identify -format "%w" $theInputFile`
+    curWidth=$(identify -format "%w" $theInputFile)
 
     if [ "$cropRight" == 0 ] ; then
         cropRightPixels=0;
     else
-        cropRightPixels=$(expr $curWidth / $cropRight)
+        cropRightPixels=$(( curWidth / cropRight ))
     fi
 
     if [ "$cropLeft" == 0 ] ; then
         cropLeftPixels=0
     else
-        cropLeftPixels=$(expr $curWidth / $cropLeft)
+        cropLeftPixels=$(( curWidth / cropLeft ))
     fi
-    newWidth=$(expr $curWidth - $cropRightPixels - $cropLeftPixels)
+    newWidth=$(( curWidth - cropRightPixels - cropLeftPixels ))
 
-    curHeight=`identify -format "%h" $theInputFile`
+    curHeight=$(identify -format "%h" $theInputFile)
     if [ "$cropTop" == 0 ] ; then
         cropTopPixels=0
     else
-        cropTopPixels=$(expr $curHeight / $cropTop)
+        cropTopPixels=$(( curHeight / cropTop ))
     fi
     if [ "$cropBottom" == 0 ] ; then
         cropBottomPixels=0
     else
-        cropBottomPixels=$(expr $curHeight / $cropBottom)
+        cropBottomPixels=$(( curHeight / cropBottom ))
     fi
-    newHeight=$(expr $curHeight - $cropBottomPixels - $cropTopPixels)
+    newHeight=$(( curHeight - cropBottomPixels - cropTopPixels ))
 
     # cropping the image
 
     convert $theInputFile -crop ${newWidth}x${newHeight}+${cropLeftPixels}+${cropTopPixels} $theOutputFile
 
 done
-

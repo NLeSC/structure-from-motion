@@ -12,8 +12,9 @@ script:
 - docker run -d --name test -v $TRAVIS_BUILD_DIR/examples/rock-section:/data nlesc/structure-from-motion sleep 1000
 - docker exec test apt-get update
 - docker exec test apt-get install -y python-coverage
-- docker exec test python-coverage run /sfm/run-sfm.py
-- docker exec python-coverage report
+- docker exec -t test python-coverage run /sfm/run-sfm.py
+- docker exec test python-coverage report
+- docker exec test chown -R $UID /data
 - docker rm -f test
 - python test/test_rock_section.py $TRAVIS_BUILD_DIR/examples/rock-section
 

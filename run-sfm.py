@@ -26,7 +26,7 @@
 # #### END LICENSE BLOCK ####
 
 import argparse
-import gzip
+#import gzip
 import os
 import sys
 #import Image
@@ -73,6 +73,7 @@ BIN_SIFT = None
 BIN_BUNDLER = None
 BIN_MATCHKEYS = None
 BIN_MATCHKEYS_PART = None
+BIN_MATCHKEYS_FULL = None
 BIN_BUNDLE2PMVS = None
 BIN_RADIAL_UNDISTORT = None
 BIN_CMVS = None
@@ -191,7 +192,6 @@ CCD_WIDTHS = {
      "EASTMAN KODAK COMPANY KODAK Z650 ZOOM DIGITAL CAMERA"   : 5.76, # 1/2.5"
      "EASTMAN KODAK COMPANY KODAK Z700 ZOOM DIGITAL CAMERA"   : 5.76, # 1/2.5"
      "EASTMAN KODAK COMPANY KODAK Z740 ZOOM DIGITAL CAMERA"   : 5.76, # 1/2.5"
-     "EASTMAN KODAK COMPANY KODAK Z740 ZOOM DIGITAL CAMERA"   : 5.76, # 1/2.5"?
      "FUJIFILM FinePix2600Zoom"                  : 5.27,   # 1/2.7"
      "FUJIFILM FinePix40i"                       : 7.600,  # 1/1.7"
      "FUJIFILM FinePix A310"                     : 5.27,   # 1/2.7"

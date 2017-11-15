@@ -19,7 +19,7 @@ class FramesExtractor():
             os.makedirs(self.outputDir)
 
         #call(["avconv", "-i", self.videoFileName,"-deinterlace",os.path.join(self.outputDir,"frame-%8d.jpg")])
-        call(["avconv", "-i", self.videoFileName,"-filter:v","yadif",os.path.join(self.outputDir,"frame-%8d.jpg")])        
+        call(["avconv", "-i", self.videoFileName,"-filter:v","yadif",os.path.join(self.outputDir,"frame-%8d.jpg")])
 
 
 
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     try:
         videoFileName = sys.argv[1]
-    except:
+    except IndexError:
         print "An error occurred. Aborting."
         sys.exit(1)
 
@@ -54,6 +54,3 @@ if __name__ == "__main__":
 
     framesExtractor = FramesExtractor(videoFileName,outputDir)
     framesExtractor.extractAllFrames()
-
-
-

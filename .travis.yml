@@ -9,5 +9,15 @@ before_install:
 - docker pull nlesc/structure-from-motion
 
 script:
-- docker run -u $UID -v $TRAVIS_BUILD_DIR/examples/rock-section:/data nlesc/structure-from-motion
+- docker run -d --name test -v $TRAVIS_BUILD_DIR/examples/rock-section:/data nlesc/structure-from-motion sleep 1000
+- docker exec test apt-get update
+- docker exec test apt-get install -y python-coverage
+- docker exec test python-coverage run /sfm/run-sfm.py
+- docker exec python-coverage report
+- docker rm -f test
 - python test/test_rock_section.py $TRAVIS_BUILD_DIR/examples/rock-section
+
+after_success:
+- pip install python-coveralls
+- cd $TRAVIS_BUILD_DIR/examples/rock-section
+- coveralls

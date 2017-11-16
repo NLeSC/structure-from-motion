@@ -9,7 +9,7 @@ before_install:
 - docker pull nlesc/structure-from-motion
 
 script:
-- docker run -d --name test -v $TRAVIS_BUILD_DIR/examples/rock-section:/data -v .git:/sfm/.git nlesc/structure-from-motion sleep 3000
+- docker run -d --name test -v $TRAVIS_BUILD_DIR/examples/rock-section:/data -v $TRAVIS_BUILD_DIR/.git:/sfm/.git nlesc/structure-from-motion sleep 3000
 - docker exec test apt-get update
 - docker exec test apt-get install -y python-pip python-dev build-essential
 - docker exec test pip install python-coveralls

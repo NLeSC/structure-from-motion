@@ -3,19 +3,19 @@ sudo: required
 language: python
 
 services:
-  - docker
+- docker
 
 before_install:
 - docker pull nlesc/structure-from-motion
 
 script:
-- docker run -d --name test -v $TRAVIS_BUILD_DIR/examples/rock-section:/data nlesc/structure-from-motion sleep 3000
+- docker run -d --name test -v $TRAVIS_BUILD_DIR/examples/rock-section:/data -v $TRAVIS_BUILD_DIR/.git:/sfm/.git nlesc/structure-from-motion sleep 3000
 - docker exec test apt-get update
 - docker exec test apt-get install -y python-pip python-dev build-essential
 - docker exec test pip install python-coveralls
 - travis_wait docker exec -t test coverage run --source=/sfm /sfm/run-sfm.py
 - docker exec test coverage report
-- docker exec test /bin/bash -c "export COVERALLS_REPO_TOKEN=ZtEZQsH2ivrpUHyclN37tpZE2hWREcXz6 && coveralls --base_dir=/sfm --nogit"
+- docker exec -e COVERALLS_REPO_TOKEN=ZtEZQsH2ivrpUHyclN37tpZE2hWREcXz6 test coveralls --base_dir=/sfm
 - docker exec test chown -R $UID /data
 - docker rm -f test
 - python test/test_rock_section.py $TRAVIS_BUILD_DIR/examples/rock-section

@@ -4,7 +4,7 @@
 #
 # Build this image:
 # 
-# sudo docker build -r sfm_image .
+# sudo docker build -t sfm_image .
 
 # Run pipeline on a collection of images in the current working directory:
 #

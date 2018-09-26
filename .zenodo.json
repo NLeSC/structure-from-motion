@@ -37,7 +37,7 @@
             "orcid": "0000-0002-5821-2060"
         }
     ],
-    "description": "\"<p>\nThis is a complete Structure from Motion pipeline. Structure from Motion is a technique to construct a 3-D point cloud from a set of images (or a video) of an object. The software in this repository relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.\n</p>\n<p>\nThis software is also available as a Docker image on Docker Hub, see: <a href=\\\"https://hub.docker.com/r/nlesc/structure-from-motion/\\\">https://hub.docker.com/r/nlesc/structure-from-motion/</a>.\n</p>\"\n",
+    "description": "<p>This is a complete Structure from Motion pipeline. Structure from Motion is a technique to construct a 3-D point cloud from a set of images (or a video) of an object. The software in this repository relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.</p><p>This software is also available as a Docker image on Docker Hub, see: <a href=\"https://hub.docker.com/r/nlesc/structure-from-motion/\">https://hub.docker.com/r/nlesc/structure-from-motion/</a>.</p>",
     "keywords": [
         "structure from motion",
         "sfm",

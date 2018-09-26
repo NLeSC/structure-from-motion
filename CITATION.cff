@@ -47,6 +47,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-5821-2060"
 cff-version: "1.0.3"
 date-released: 2018-09-26
+doi: "10.5281/zenodo.594751"
 keywords: 
   - "structure from motion"
   - sfm

@@ -1,0 +1,62 @@
+# YAML 1.2
+---
+abstract: |
+    "<p>
+    This is a complete Structure from Motion pipeline. Structure from Motion is a technique to construct a 3-D point cloud from a set of images (or a video) of an object. The software in this repository relies heavily on a number of third party libaries, notably Bundler, CMVS, PMVS, and SIFT.
+    </p>
+    <p>
+    This software is also available as a Docker image on Docker Hub, see: <a href=\"https://hub.docker.com/r/nlesc/structure-from-motion/\">https://hub.docker.com/r/nlesc/structure-from-motion/</a>.
+    </p>"
+authors: 
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Spaaks
+    given-names: "Jurriaan H."
+    orcid: "https://orcid.org/0000-0002-7064-4069"
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Drost
+    given-names: Niels
+    orcid: "https://orcid.org/0000-0001-9795-7981"
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Maassen
+    given-names: Jason
+    orcid: "https://orcid.org/0000-0002-8172-4865"
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Oord
+    given-names: Gijs
+    name-particle: "van den"
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Georgievska
+    given-names: Sonja
+  -
+    affiliation: "BIMData.io"
+    family-names: Mor
+    given-names: "Stéphane "
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Meijer
+    given-names: Christiaan
+  -
+    affiliation: "Netherlands eScience Center"
+    family-names: Verhoeven
+    given-names: Stefan
+    orcid: "https://orcid.org/0000-0002-5821-2060"
+cff-version: "1.0.3"
+date-released: 2018-09-26
+keywords: 
+  - "structure from motion"
+  - sfm
+  - sift
+  - bundler
+  - CMVS
+  - PMVS
+license: "GPL-2.0-only"
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/NLeSC/structure-from-motion/"
+title: "Structure from Motion"
+version: "1.0.3"
+...

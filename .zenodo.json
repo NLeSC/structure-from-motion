@@ -47,7 +47,7 @@
         "PMVS"
     ],
     "license": {
-        "id": "GPL-2.0-only"
+        "id": "GPL-2.0"
     },
     "title": "Structure from Motion"
 }

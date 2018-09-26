@@ -21,7 +21,7 @@ sudo docker run -u $UID -v "$PWD:/data" -i -t nlesc/structure-from-motion /bin/b
 The main script to run the pipeline is called run-sfm.py'.
 The image can also be built from source. To do this yourself, you need to checkout the submodules:
 ````
-git submodule checkout --init --recursive
+git submodule update --init --recursive
 ````
 Then, build the image using the Dockerfile in the repository root directory:
 ````
